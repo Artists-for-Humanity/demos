@@ -1,7 +1,13 @@
 let level = 1;
 let select = true;
 let color = ['', 'blue', 'green', 'yellow', 'red'];
-let levels = [[1, 0, 2, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 2, 0, 0, 3, 0, 0, 0, 0, 1]];
+let levels = [[
+    1, 0, 2, 3, 4, 
+    0, 0, 0, 0, 0, 
+    0, 0, 0, 4, 0, 
+    0, 2, 0, 0, 3, 
+    0, 0, 0, 0, 1
+]];
 
 start();
 function start() {
