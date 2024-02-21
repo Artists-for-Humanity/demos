@@ -101,8 +101,7 @@ function start() {
             boxes[20].style.backgroundColor === color[5] &&
             boxes[27].style.backgroundColor === color[5] &&
             boxes[34].style.backgroundColor === color[5] &&
-            boxes[41].style.backgroundColor === color[5] &&
-            boxes[25].style.backgroundColor === color[5]
+            boxes[41].style.backgroundColor === color[5]
             ) {
             alert("Level Complete");
         }
