@@ -15,37 +15,46 @@ function start() {
     let boxes = document.getElementsByClassName('eachbox');
     let backColor = [];
     let count;
+    let selectedBox;
+    
     for (let i = 0; i < boxes.length; i++) {
         boxes[i].innerText = levels[level - 1][i];
+    
         if (levels[level - 1][i] == 0) {
             boxes[i].innerText = '';
             boxes[i].style.backgroundColor = 'transparent';
         } else {
             boxes[i].innerText = levels[level - 1][i];
             boxes[i].style.backgroundColor = color[boxes[i].innerText];
-            boxes[i].draggable = true;
+            boxes[i].addEventListener('click', handleClick);
         }
-        backColor[i] = boxes[i].style['background-color']
-        boxes[i].addEventListener('dragstart', (e) => {
-            select = boxes[i].innerText;
-        });
-
-        boxes[i].addEventListener('dragenter', (e) => {
-            if(e.target.innerText === ''){
-                boxes[i].style.backgroundColor = color[select];
-                backColor[i] = color[select];
-            }
-        });
-
-        boxes[i].addEventListener('dragend', () => {
-            count = backColor.filter((item) => {
-               return item.length < 8;  
-            });
-            if(count.length == 36) {
-                check();
-            }
-        });
+    
+        backColor[i] = boxes[i].style['background-color'];
     }
+    
+    function handleClick(e) {
+        const clickedBox = e.target;
+    
+        if (clickedBox.innerText !== '') {
+            selectedBox = clickedBox.innerText;
+        }
+    }
+    
+    for (let i = 0; i < boxes.length; i++) {
+        boxes[i].addEventListener('click', (e) => {
+            const clickedBox = e.target;
+    
+            if (clickedBox.innerText === '') {
+                clickedBox.style.backgroundColor = color[selectedBox];
+                backColor[i] = color[selectedBox];
+                count = backColor.filter((item) => item.length < 8);
+    
+                if (count.length === 36) {
+                    check();
+                }
+            }
+        });
+    }    
 
     function check() {
         if (boxes[0].style.backgroundColor === color[1] &&

@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+* {
+    font-family: "Anta", sans-serif;
+    font-style: normal;
+}
+
 body {
     background-color: black;
     display: flex;
@@ -5,13 +12,17 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    color: transparent;
+    font-size: 2em;
+}
+
+#container {
+    border: 2.5px solid darkgray;
 }
 
 .eachbox {
-    border: 1px solid darkgray;
-    height: 125px;
-    width: 125px;
+    border: 5px solid darkgray;
+    height: 87px;
+    width: 87px;
     margin: 0;
     display: flex;
     align-items: center;
