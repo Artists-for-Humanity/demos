@@ -113,9 +113,11 @@ function start() {
             boxes[20].style.backgroundColor === color[5] &&
             boxes[27].style.backgroundColor === color[5]
             ) {
-                if (confirm("Level Complete!")) {
-                    window.location.href = '../../index.html';
-                }
+                setTimeout(() => {
+                    if (confirm("Level Complete!")) {
+                        window.location.href = '../../index.html';
+                    }
+                  }, "500");
         }
     }
 }
