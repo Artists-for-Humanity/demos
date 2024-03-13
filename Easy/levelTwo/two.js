@@ -40,7 +40,7 @@ function start() {
     }
     
     for (let i = 0; i < boxes.length; i++) {
-        boxes[i].addEventListener('click', (e) => {
+        boxes[i].addEventListener('mouseover', (e) => {
             const clickedBox = e.target;
     
             if (clickedBox.innerText === '') {
