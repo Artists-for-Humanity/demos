@@ -162,7 +162,7 @@ $(function(){
             $('#JP').css('fill', '#aa1f4b');
             $('#AR').css('fill', '#4575b4'); 
             $('#OM, #AE').css('fill', '#b2182b'); 
-        } 
+        }
         else {
             $('path').css('fill', '');
             $('path').css('stroke-width', '0.5');

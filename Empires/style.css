@@ -48,7 +48,9 @@ body {
     stroke-width: 0.5;
     transition: 0.5s;
 }
-
+.ag-canvas_svg path:hover {
+    filter: brightness(0.85);
+}
 @media screen and (max-width: 767px) {
     .ag-canvas {
     -webkit-flex-flow: row wrap;
@@ -62,7 +64,6 @@ body {
     margin-left: 0;
     }
 }
-
 .range input{
 	-webkit-appearance:none;
 	width:50vw;
