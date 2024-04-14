@@ -159,9 +159,54 @@ $(function(){
             $('#IN').css('fill', '#e17c05');
             $('#CN').css('fill', '#7f0000');
             $('#ID').css('fill', '#fb8072');
-            $('#JP').css('fill', '#aa1f4b');
             $('#AR').css('fill', '#4575b4'); 
             $('#OM, #AE').css('fill', '#b2182b'); 
+            $('#JP').css('fill', '#aa1f4b');
+        }
+        else if (getValRange >= 1950) {
+            $('path').not('#AT, #LY, #AU, #US, #CA, #BR, #GF, #NG, #MY, #GH, #GB, #BZ, #GY, #JM, #SL, #FK, #YE, #LS, #SZ, #BW, #ZW, #ZM, #MW, #TZ, #KE, #UG, #SO, #SS, #SD, #EG, #GQ, #GH, #QA, #KW, #FR, #DZ, #MR, #NE, #TD, #CF, #CG, #GA, #CI, #BF, #NE, #BJ, #MA, #SN, #GN, #CM, #MG, #VN, #JP, #IT, #DE, #RU, #UZ, #TM, #KZ, #GE, #AZ, #ME, #AM, #UA, #BY, #LV, #EE, #KG, #TJ, #LT, #IN, #CN, #ID, #JP, #ML, #TG, #TN, #TF, #DZ, #AR, #OM, #AE').css('fill', '');
+            $('path').not('#DE, #LY, #AT')
+                .css({
+                'stroke-width': '0.5',
+                'stroke': ''
+            });
+          
+            $('#US').css('fill', '#081d58');
+            $('#CA').css('fill', '#d6604d');
+            $('#BR').css('fill', '#33a02c');
+            $('#GF').css('fill', '#023858');
+            $('#NG').css('fill', '#b2182b');
+          
+            $('#LY').css({
+            'fill': '#023858',
+            'stroke-width': '2.5',
+            'stroke': '#b2182b'
+            });
+
+            $('#DE').css({
+                'fill': '#000000',
+                'stroke-width': '2.5',
+                'stroke': '#a03500'
+            });
+
+            $('#AT').css({
+                'fill': '#ffffff',
+                'stroke-width': '2.5',
+                'stroke': '#023858'
+            });
+          
+            $('#MY, #GH, #GB, #BZ, #GY, #JM, #SL, #FK, #YE, #LS, #SZ, #BW, #ZW, #ZM, #MW, #TZ, #KE, #UG, #SO, #SS, #SD, #EG, #GQ, #GH, #QA, #KW').css('fill', '#b2182b');
+            $('#FR, #DZ, #MR, #NE, #TD, #CF, #CG, #GA, #CI, #BF, #NE, #BJ, #MA, #SN, #GN, #CM, #MG, #VN, #JP, #ML, #TG, #TN, #TF').css('fill', '#023858');
+            $('#IT').css('fill', '#00441b');
+            $('#RU, #UZ, #TM, #KZ, #GE, #AZ, #ME, #AM, #UA, #BY, #LV, #EE, #KG, #TJ, #LT').css('fill', '#ffffff');
+            $('#IN').css('fill', '#e17c05');
+            $('#CN').css('fill', '#7f0000');
+            $('#ID').css('fill', '#fb8072');
+            $('#AR').css('fill', '#4575b4');
+            $('#OM, #AE').css('fill', '#b2182b');
+            $('#AU').css('fill', '#3264c8');
+        }
+        else if (getValRange >= 1940) {
         }
         else {
             $('path').css('fill', '');
