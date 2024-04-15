@@ -21,7 +21,7 @@ body {
     appearance: none;
 	-webkit-appearance:none;
 	width:50vw;
-	height:8px;
+	height:15px;
 	border-radius:5px;
 	background-color:#4e4e4e4b;
 	outline:none;
@@ -32,7 +32,7 @@ body {
 	height:25px;
 	border-radius:50%;
 	background-color:#d1dbdd;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 .range span{
 	position:absolute;
@@ -56,12 +56,15 @@ body {
 	top:50%;
 	transform:translateY(-50%) rotate(-90deg);
 }
-#svgContainer {
+#svgContainer, #border {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#border {
+	position: absolute;
 }
 svg {
     position: absolute; 
