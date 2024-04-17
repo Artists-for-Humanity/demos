@@ -22,7 +22,7 @@ const Russia = "#f7fcfd";
 const Indonesia = "#fb8072";
 const Brazil = "#33a02c";
 const France = "#023858"
-const UK = "#b2182b";
+const United_Kingdom = "#b2182b";
 const Turkey = "#edad08";
 const Italy = "#00441b";
 const Mexico = "#cc503e";
@@ -34,6 +34,11 @@ const Ethiopia = "#fdb462";
 const DR_Congo = "#5f4690"; 
 const Australia = "#3264c8"; 
 const Kazakhstan = "#986ba1";
+const Spain = "#bd3200";
+const East_Germany = "#a03500";
+const Algeria = "#0f8554";
+const Argentina = "#4575b4";
+const Dutch_Empire = "#b9a087"; 
 
 document.addEventListener("click", function(event) {
     if (event.target.tagName === "path") {
@@ -993,41 +998,41 @@ document.addEventListener("click", function(event) {
                 text.innerHTML = 
                 "Not Enough Data"
             }
-        } else if(fillColor === UK) {
+        } else if(fillColor === United_Kingdom) {
             data.style.display = "flex"; 
             if(currentYear >= 2022){
                 text.innerHTML =
-                "NAME: UK" + 
+                "NAME: United Kingdom" + 
                 "<br>POPULATION: POPULATION" +
                 "<br>GDP: $3,411,255,000,000";
             } else if(currentYear >= 2020){
                 text.innerHTML =
-                "NAME: UK" + 
+                "NAME: United Kingdom" + 
                 "<br>POPULATION: TEXT" +
                 "<br>GDP: $3,019,057,000,000";
             } else if(currentYear >= 2010){
                 text.innerHTML =
-                "NAME: UK" + 
+                "NAME: United Kingdom" + 
                 "<br>POPULATION: TEXT" +
                 "<br>GDP: $2,715,342,195,952";
             } else if(currentYear >= 2000){
                 text.innerHTML =
-                "NAME: UK" + 
+                "NAME: United Kingdom" + 
                 "<br>POPULATION: TEXT" +
                 "<br>GDP: $2,341,885,449,957";
             } else if(currentYear >= 1990){
                 text.innerHTML =
-                "NAME: UK" + 
+                "NAME: United Kingdom" + 
                 "<br>POPULATION: TEXT" +
                 "<br>GDP: $2,063,348,057,633";
             } else if(currentYear >= 1980){
                 text.innerHTML =
-                "NAME: UK" + 
+                "NAME: United Kingdom" + 
                 "<br>POPULATION: TEXT" +
                 "<br>GDP: $1,541,083,825,696";
             } else if(currentYear >= 1970){
                 text.innerHTML =
-                "NAME: UK" + 
+                "NAME: United Kingdom" + 
                 "<br>POPULATION: TEXT" +
                 "<br>GDP: $1,254,817,532,612";
             } else if(currentYear >= 1960){
@@ -1821,6 +1826,296 @@ document.addEventListener("click", function(event) {
                 "NAME: Kazakhstan" + 
                 "<br>POPULATION: TEXT" +
                 "<br>GDP: $176,936,705,060";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Spain) {
+            data.style.display = "flex"; 
+            if(currentYear >= 2000){
+                text.innerHTML =
+                "NAME: Spain" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $1,374,232,793,741";
+            } else if(currentYear >= 1990){
+                text.innerHTML =
+                "NAME: Spain" + 
+                "<br>POPULATION: Spain" +
+                "<br>GDP: $937,189,225,331";
+            } else if(currentYear >= 1980){
+                text.innerHTML =
+                "NAME: Spain" + 
+                "<br>POPULATION: Spain" +
+                "<br>GDP: $650,877,905,289";
+            } else if(currentYear >= 1970){
+                text.innerHTML =
+                "NAME: Francoist Spain" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $399,346,084,627";
+            } else if(currentYear >= 1940){
+                text.innerHTML =
+                "NAME: Francoist Spain" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $101,677,950,775";
+            } else if(currentYear >= 1930){
+                text.innerHTML =
+                "NAME: Spain" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $114,374,201,852";
+            } else if(currentYear >= 1920){
+                text.innerHTML =
+                "NAME: Spain" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $85,653,951,933";
+            } else if(currentYear >= 1910){
+                text.innerHTML =
+                "NAME: Spain" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $69,715,653,705";
+            } else if(currentYear >= 1900){
+                text.innerHTML =
+                "NAME: Spain" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $61,787,853,621";
+            } else if(currentYear >= 1890){
+                text.innerHTML =
+                "NAME: Spanish Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $67,365,929,526";
+            } else if(currentYear >= 1880){
+                text.innerHTML =
+                "NAME: Spanish Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $63,447,944,597";
+            } else if(currentYear >= 1870){
+                text.innerHTML =
+                "NAME: Spanish Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $45,420,476,309";
+            } else if(currentYear >= 1850){
+                text.innerHTML =
+                "NAME: Spanish Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $37,794,331,556";
+            } else if(currentYear >= 1830){
+                text.innerHTML =
+                "NAME: Spanish Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $31,694,563,777";
+            } else if(currentYear >= 1820){
+                text.innerHTML =
+                "NAME: Spanish Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $39,931,088,068";
+            } else if(currentYear >= 1800){
+                text.innerHTML =
+                "NAME: Spanish Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $53,646,182,394";
+            } else if(currentYear >= 1750){
+                text.innerHTML =
+                "NAME: Spanish Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $38,842,843,999";
+            } else if(currentYear >= 1700){
+                text.innerHTML =
+                "NAME: Spanish Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $56,995,384,657";
+            } else if(currentYear >= 1650){
+                text.innerHTML =
+                "NAME: Spanish Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $50,690,979,215";
+            } else if(currentYear >= 1600){
+                text.innerHTML =
+                "NAME: Spanish Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $55,884,941,719";
+            } else if(currentYear >= 1550){
+                text.innerHTML =
+                "NAME: Spanish Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $39,990,387,586";
+            } else if(currentYear >= 1500){
+                text.innerHTML =
+                "NAME: Castile" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $12,358,486,896";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === East_Germany) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1990){
+                text.innerHTML =
+                "NAME: East Germany" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $953,317,680,843";
+            } else if(currentYear >= 1980){
+                text.innerHTML =
+                "NAME: East Germany" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $833,147,748,268";
+            } else if(currentYear >= 1970){
+                text.innerHTML =
+                "NAME: East Germany" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $635,623,243,856";
+            } else if(currentYear >= 1960){
+                text.innerHTML =
+                "NAME: East Germany" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $421,056,152,181";
+            } else if(currentYear >= 1950){
+                text.innerHTML =
+                "NAME: East Germany" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $200,057,115,532";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Algeria) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1990){
+                text.innerHTML =
+                "NAME: Algeria" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $146,061,257,920";
+            } else if(currentYear >= 1980){
+                text.innerHTML =
+                "NAME: Algeria" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $117,105,471,603";
+            } else if(currentYear >= 1970){
+                text.innerHTML =
+                "NAME: Algeria" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $61,906,143,586";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Argentina) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1970){
+                text.innerHTML =
+                "NAME: Argentina" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $345,676,500,680";
+            } else if(currentYear >= 1960){
+                text.innerHTML =
+                "NAME: Argentina" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $226,421,814,799";
+            } else if(currentYear >= 1950){
+                text.innerHTML =
+                "NAME: Argentina" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $168,969,277,185";
+            } else if(currentYear >= 1940){
+                text.innerHTML =
+                "NAME: Argentina" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $116,487,767,619";
+            } else if(currentYear >= 1930){
+                text.innerHTML =
+                "NAME: Argentina" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $95,883,931,819";
+            } else if(currentYear >= 1920){
+                text.innerHTML =
+                "NAME: Argentina" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $60,800,890,897";
+            } else if(currentYear >= 1910 && currentYear <= 1919){
+                text.innerHTML =
+                "NAME: Argentina" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $51,617,037,323";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Dutch_Empire) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1940){
+                text.innerHTML =
+                "NAME: Dutch Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $162,800,090,542";
+            } else if(currentYear >= 1930){
+                text.innerHTML =
+                "NAME: Dutch Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $217,806,787,261";
+            } else if(currentYear >= 1920){
+                text.innerHTML =
+                "NAME: Dutch Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $153,136,816,616";
+            } else if(currentYear >= 1910){
+                text.innerHTML =
+                "NAME: Dutch Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $122,647,441,437";
+            } else if(currentYear >= 1900){
+                text.innerHTML =
+                "NAME: Dutch Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $98,156,925,587";
+            } else if(currentYear >= 1890){
+                text.innerHTML =
+                "NAME: Dutch Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $80,287,859,065";
+            } else if(currentYear >= 1880){
+                text.innerHTML =
+                "NAME: Dutch Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $70,093,669,105";
+            } else if(currentYear >= 1870){
+                text.innerHTML =
+                "NAME: Dutch Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $52,658,599,325";
+            } else if(currentYear >= 1850){
+                text.innerHTML =
+                "NAME: Dutch Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $35,129,518,045";
+            } else if(currentYear >= 1830){
+                text.innerHTML =
+                "NAME: Dutch Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $41,325,483,421";
+            } else if(currentYear >= 1820){
+                text.innerHTML =
+                "NAME: Dutch Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $37,495,774,708";
+            } else if(currentYear >= 1800){
+                text.innerHTML =
+                "NAME: Dutch Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $38,385,301,146";
+            } else if(currentYear >= 1750){
+                text.innerHTML =
+                "NAME: Dutch Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $22,917,053,106";
+            } else if(currentYear >= 1700){
+                text.innerHTML =
+                "NAME: Dutch Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $19,525,694,013";
+            } else if(currentYear >= 1650){
+                text.innerHTML =
+                "NAME: Dutch Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $17,494,833,100";
             } else {
                 text.innerHTML = 
                 "Not Enough Data"
