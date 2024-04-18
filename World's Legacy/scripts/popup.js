@@ -39,6 +39,11 @@ const East_Germany = "#a03500";
 const Algeria = "#0f8554";
 const Argentina = "#4575b4";
 const Dutch_Empire = "#b9a087"; 
+const Sweden = "#4c91bf";
+const Poland = "#f781bf";
+const Belgium = "#762a83";
+const Czechoslovakia = "#35978f";
+const Austria_Hungary = "#ca562c";
 
 document.addEventListener("click", function(event) {
     if (event.target.tagName === "path") {
@@ -2116,6 +2121,206 @@ document.addEventListener("click", function(event) {
                 "NAME: Dutch Empire" + 
                 "<br>POPULATION: TEXT" +
                 "<br>GDP: $17,494,833,100";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Sweden) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1940 && currentYear <= 1950){
+                text.innerHTML =
+                "NAME: Sweden" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $60,967,706,805";
+            } else if(currentYear >= 1900 && currentYear <= 1910){
+                text.innerHTML =
+                "NAME: Sweden-Norway" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $30,036,617,996";
+            } else if(currentYear >= 1890){
+                text.innerHTML =
+                "NAME: Sweden-Norway" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $22,293,318,484";
+            } else if(currentYear >= 1880){
+                text.innerHTML =
+                "NAME: Sweden-Norway" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $19,321,390,476";
+            } else if(currentYear >= 1870){
+                text.innerHTML =
+                "NAME: Sweden-Norway" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $15,746,930,666";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Poland) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1930 && currentYear <= 1940){
+                text.innerHTML =
+                "NAME: Poland" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $111,095,309,648";
+            } else if(currentYear >= 1920){
+                text.innerHTML =
+                "NAME: Poland" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $89,121,846,426";
+            } else if(currentYear >= 1700 && currentYear <= 1750){
+                text.innerHTML =
+                "NAME: Poland-Lithuania" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $9,828,875,903";
+            } else if(currentYear >= 1650){
+                text.innerHTML =
+                "NAME: Poland-Lithuania" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $10,635,053,062";
+            } else if(currentYear >= 1600){
+                text.innerHTML =
+                "NAME: Poland-Lithuania" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $10,561,034,042";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Belgium) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1930 && currentYear <= 1940){
+                text.innerHTML =
+                "NAME: Belgian Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $90,466,583,402";
+            } else if(currentYear >= 1920){
+                text.innerHTML =
+                "NAME: Belgian Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $67,462,930,491";
+            } else if(currentYear >= 1910){
+                text.innerHTML =
+                "NAME: Belgian Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $65,399,325,315";
+            } else if(currentYear >= 1900){
+                text.innerHTML =
+                "NAME: Belgian Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $54,178,177,849";
+            } else if(currentYear >= 1890){
+                text.innerHTML =
+                "NAME: Belgian Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $45,562,536,944";
+            } else if(currentYear >= 1880){
+                text.innerHTML =
+                "NAME: Belgium" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $33,556,197,180";
+            } else if(currentYear >= 1870){
+                text.innerHTML =
+                "NAME: Belgium" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $27,103,105,697";
+            } else if(currentYear >= 1850){
+                text.innerHTML =
+                "NAME: Belgium" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $16,234,216,608";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Czechoslovakia) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1930 && currentYear <= 1940){
+                text.innerHTML =
+                "NAME: NAME" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $80,723,411,351";
+            } else if(currentYear >= 1920){
+                text.innerHTML =
+                "NAME: NAME" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $49,563,738,350";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Austria_Hungary) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1910 && currentYear <= 1920){
+                text.innerHTML =
+                "NAME: Austria-Hungary" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $138,114,856,532";
+            } else if(currentYear >= 1900){
+                text.innerHTML =
+                "NAME: Austria-Hungary" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $111,272,320,656";
+            } else if(currentYear >= 1890){
+                text.innerHTML =
+                "NAME: Austria-Hungary" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $88,528,381,931";
+            } else if(currentYear >= 1880){
+                text.innerHTML =
+                "NAME: Austria-Hungary" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $72,378,148,647";
+            } else if(currentYear >= 1870){
+                text.innerHTML =
+                "NAME: Austria-Hungary" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $57,895,766,770";
+            } else if(currentYear >= 1850){
+                text.innerHTML =
+                "NAME: Austrian Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $42,925,734,097";
+            } else if(currentYear >= 1830){
+                text.innerHTML =
+                "NAME: Austrian Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $32,982,618,608";
+            } else if(currentYear >= 1820){
+                text.innerHTML =
+                "NAME: Austrian Empire" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $27,745,476,091";
+            } else if(currentYear >= 1800){
+                text.innerHTML =
+                "NAME: Habsburg Austria" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $24,958,521,600";
+            } else if(currentYear >= 1750){
+                text.innerHTML =
+                "NAME: Habsburg Austria" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $41,921,329,676";
+            } else if(currentYear >= 1700){
+                text.innerHTML =
+                "NAME: Habsburg Austria" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $12,836,407,925";
+            } else if(currentYear >= 1600 && currentYear <= 1650){
+                text.innerHTML =
+                "NAME: Habsburg Austria" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $8,240,041,191";
+            } else if(currentYear >= 1550){
+                text.innerHTML =
+                "NAME: Habsburg Austria" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $15,811,554,939";
+            } else if(currentYear >= 1500){
+                text.innerHTML =
+                "NAME: Habsburg Austria" + 
+                "<br>POPULATION: TEXT" +
+                "<br>GDP: $7,299,132,117";
             } else {
                 text.innerHTML = 
                 "Not Enough Data"
