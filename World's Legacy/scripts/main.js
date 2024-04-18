@@ -51,7 +51,7 @@ $(function(){
         } else if(getValRange >= 1800){
             newMap = year1800;
         } else {
-            newMap = year2020;
+            newMap = '';
         }
 
         if (newMap !== currentMap) {
