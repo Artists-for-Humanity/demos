@@ -44,6 +44,8 @@ $(function(){
             }, 250);
         } else if(getValRange >= 1910){
             newMap = year1910;
+        } else if(getValRange >= 1900){
+            newMap = year1900;
         } else if(getValRange >= 1880){
             newMap = year1880;
         } else if(getValRange >= 1820){

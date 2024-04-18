@@ -126,8 +126,8 @@ document.addEventListener("click", function(event) {
             } else if(currentYear >= 1890){
                 text.innerHTML = 
                 "NAME: Qing China" + 
-                "<br>POPULATION: 380,000,000" +
-                "<br>GDP: $457,662,848,515";
+                "<br>POPULATION: 389,838,000" +
+                "<br>GDP: $474,689,675,112";
             } else if(currentYear >= 1880){
                 text.innerHTML = 
                 "NAME: Qing China" + 
