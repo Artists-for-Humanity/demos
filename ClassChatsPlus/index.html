@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="logo.png" rel="icon">
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+		<title>ClassChats+</title>
+	</head>
+	<body>
+        <div id="rules" class="rules">
+            <div class="contain"><div class="disclaimerContainer"><div class="scroll"><h2>Community Guidelines:</h2><p>By logging onto the community and activating your profile, you are considered to be in agreement with the terms and conditions listed below.</p><h2>Overview:</h2><p>ClassChats+ is a social network that was designed in order to establish a strong student community in the Boston area. In order to help one another share academic resources, there needs to be an environment where students can freely communicate and feel comfortable. Schools in the Boston area currently lack a strong social platform, and so ClassChats+ intends to fill the gap where students can come together and learn collectively.</p><h2>Guidelines:</h2><ul><li>Treat others online as you would treat them in real life.</li><li>Be tolerant towards other’s viewpoints; respectfully disagree when opinions do not align.</li><li>Respect the privacy and personal information of other students.</li><li>Communicate with courtesy and respect.</li></ul><h2>Please Do Not:</h2><ul><li>Make personal attacks on other community members.</li><li>Use defamatory remarks or make false statements against others.</li><li>Post prejudiced comments or profanity.</li><li>Bully or make inflammatory remarks to other community members.</li></ul><h2>Use Messaging Responsibly:</h2><div>These tools are intended to keep students in touch with one another, to help facilitate networking and to promote common interests. Some examples might include:<br><ul><li>Inviting local area students to a networking event or to join a local club.</li><li>Helping to coordinate a class reunion.</li><li>Reaching out to individual students for advice, to reconnect or to join a group.</li></ul></div><h2>Consequences:</h2><p>We will take action when we see someone violating these guidelines. Sometimes that just means giving someone a warning; other times it means revoking certain privileges or accounts entirely. We request that all community members report behavior that violates our guidelines to vtran.org.</p></div></div></div>
+            <button id="agree" onclick="enterChat()">I Agree to the Community Guidelines</button>
+        </div>
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div id="comments-container"></div>
+                </div>
+                <div class="panel-footer">
+                    <form role="form">
+                        <div class="form-group" style="display: flex; flex-direction: row; justify-content: center;">
+                            <input class="form-control" id="comments" name="comments" value="Send Message...">
+                            <button type="submit" id="submit-btn" name="submit-btn" class="btn btn-success" style="margin-right: 15px;">Send</button>
+                            <button type="reset" class="btn btn-danger">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.firebase.com/js/client/1.0.6/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+	</body>
+</html>
