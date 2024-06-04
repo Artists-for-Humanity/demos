@@ -53,13 +53,15 @@ $(function(){
         } else if(getValRange >= 1870){
             newMap = year1870;
         } else if(getValRange >= 1850){
-            newMap = year1870;
+            newMap = year1850;
         } else if(getValRange >= 1830){
             newMap = year1830;
         } else if(getValRange >= 1820){
             newMap = year1820;
         } else if(getValRange >= 1800){
             newMap = year1800;
+        } else if(getValRange >= 1750){
+            newMap = year1750;
         } else {
             newMap = '';
         }

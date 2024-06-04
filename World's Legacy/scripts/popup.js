@@ -44,6 +44,10 @@ const Poland = "#f781bf";
 const Belgium = "#762a83";
 const Czechoslovakia = "#35978f";
 const Austria_Hungary = "#ca562c";
+const Bavaria = "#045a8d";
+const Two_Sicilies = "#5aae61";
+const Papacy = "FIX";
+const Sikh = "#39b185";
 
 document.addEventListener("click", function(event) {
     if (event.target.tagName === "path") {
@@ -2316,6 +2320,100 @@ document.addEventListener("click", function(event) {
                 "NAME: Habsburg Austria" + 
                 "<br>POPULATION: 3,603,000" +
                 "<br>GDP: $7,299,132,117";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Bavaria) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1870 && currentYear <= 1879){
+                text.innerHTML =
+                "NAME: Bavaria" + 
+                "<br>POPULATION: 4,855,000" +
+                "<br>GDP: $14,252,016,674";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Two_Sicilies) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1850){
+                text.innerHTML =
+                "NAME: Two Sicilies" + 
+                "<br>POPULATION: 8,612,753" +
+                "<br>GDP: $36,989,688,675";
+            } else if(currentYear >= 1830){
+                text.innerHTML =
+                "NAME: Two Sicilies" + 
+                "<br>POPULATION: 7,578,182" +
+                "<br>GDP: $33,106,241,836";
+            } else if(currentYear >= 1820){
+                text.innerHTML =
+                "NAME: Two Sicilies" + 
+                "<br>POPULATION: 6,855,556" +
+                "<br>GDP: $31,142,224,715";
+            } else if(currentYear >= 1800){
+                text.innerHTML =
+                "NAME: Two Sicilies" + 
+                "<br>POPULATION: 6,700,000" +
+                "<br>GDP: $17,664,418,450";
+            } else if(currentYear >= 1750){
+                text.innerHTML =
+                "NAME: Two Sicilies" + 
+                "<br>POPULATION: 5,527,207" +
+                "<br>GDP: $16,871,272,774";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Papacy) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1850 && currentYear <= 1860){
+                text.innerHTML =
+                "NAME: Papacy" + 
+                "<br>POPULATION: 3,049,867" +
+                "<br>GDP: $18,494,844,337";
+            } else if(currentYear >= 1830){
+                text.innerHTML =
+                "NAME: Papacy" + 
+                "<br>POPULATION: 2,568,783" +
+                "<br>GDP: $16,553,120,918";
+            } else if(currentYear >= 1700 && currentYear <= 1749){
+                text.innerHTML =
+                "NAME: Papacy" + 
+                "<br>POPULATION: 1,353,515" +
+                "<br>GDP: $10,029,516,028";
+            } else if(currentYear >= 1600 && currentYear <= 1649){
+                text.innerHTML =
+                "NAME: Papacy" + 
+                "<br>POPULATION: 1,300,000" +
+                "<br>GDP: $9,119,963,808";
+            } else if(currentYear >= 1550){
+                text.innerHTML =
+                "NAME: Papacy" + 
+                "<br>POPULATION: 1,178,947" +
+                "<br>GDP: $8,635,243,831";
+            } else if(currentYear >= 1500){
+                text.innerHTML =
+                "NAME: Papacy" + 
+                "<br>POPULATION: 2,000,000" +
+                "<br>GDP: $8,219,070,405";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Sikh) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1830 && currentYear <= 1859){
+                text.innerHTML =
+                "NAME: Sikh Empire" + 
+                "<br>POPULATION: 14,150,000" +
+                "<br>GDP: $28,248,547,742";
+            } else if(currentYear >= 1820){
+                text.innerHTML =
+                "NAME: Sikh Empire" + 
+                "<br>POPULATION: 13,636,364" +
+                "<br>GDP: $26,176,102,277";
             } else {
                 text.innerHTML = 
                 "Not Enough Data"
