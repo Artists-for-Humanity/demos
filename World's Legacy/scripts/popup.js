@@ -46,7 +46,7 @@ const Czechoslovakia = "#35978f";
 const Austria_Hungary = "#ca562c";
 const Bavaria = "#045a8d";
 const Two_Sicilies = "#5aae61";
-const Papacy = "FIX";
+const Papacy = "#e88471";
 const Sikh = "#39b185";
 
 document.addEventListener("click", function(event) {
