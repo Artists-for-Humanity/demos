@@ -48,6 +48,9 @@ const Bavaria = "#045a8d";
 const Two_Sicilies = "#5aae61";
 const Papacy = "#e88471";
 const Sikh = "#39b185";
+const Bukhara = "#a6cee3";
+const Portuguese = "#005251";
+const Durrani = "#252525";
 
 document.addEventListener("click", function(event) {
     if (event.target.tagName === "path") {
@@ -2354,12 +2357,12 @@ document.addEventListener("click", function(event) {
                 "<br>GDP: $31,142,224,715";
             } else if(currentYear >= 1800){
                 text.innerHTML =
-                "NAME: Two Sicilies" + 
+                "NAME: Naples" + 
                 "<br>POPULATION: 6,700,000" +
                 "<br>GDP: $17,664,418,450";
             } else if(currentYear >= 1750){
                 text.innerHTML =
-                "NAME: Two Sicilies" + 
+                "NAME: Naples" + 
                 "<br>POPULATION: 5,527,207" +
                 "<br>GDP: $16,871,272,774";
             } else {
@@ -2404,7 +2407,7 @@ document.addEventListener("click", function(event) {
             }
         } else if(fillColor === Sikh) {
             data.style.display = "flex"; 
-            if(currentYear >= 1830 && currentYear <= 1859){
+            if(currentYear >= 1830 && currentYear <= 1849){
                 text.innerHTML =
                 "NAME: Sikh Empire" + 
                 "<br>POPULATION: 14,150,000" +
@@ -2414,6 +2417,89 @@ document.addEventListener("click", function(event) {
                 "NAME: Sikh Empire" + 
                 "<br>POPULATION: 13,636,364" +
                 "<br>GDP: $26,176,102,277";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Bukhara) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1830 && currentYear <= 1849){
+                text.innerHTML =
+                "NAME: Bukhara" + 
+                "<br>POPULATION: 2,100,000" +
+                "<br>GDP: $4,228,826,776";
+            } else if(currentYear >= 1820){
+                text.innerHTML =
+                "NAME: Bukhara" + 
+                "<br>POPULATION: 2,217,000" +
+                "<br>GDP: $3,529,174,772";
+            } else if(currentYear >= 1800){
+                text.innerHTML =
+                "NAME: Bukhara" + 
+                "<br>POPULATION: 2,144,500" +
+                "<br>GDP: $3,165,176,568";
+            } else if(currentYear >= 1750){
+                text.innerHTML =
+                "NAME: Bukhara" + 
+                "<br>POPULATION: 1,813,250" +
+                "<br>GDP: $2,898,987,740";
+            } else if(currentYear >= 1700){
+                text.innerHTML =
+                "NAME: Bukhara" + 
+                "<br>POPULATION: 1,391,000" +
+                "<br>GDP: $2,632,798,912";
+            } else if(currentYear >= 1650){
+                text.innerHTML =
+                "NAME: Bukhara" + 
+                "<br>POPULATION: 872,000" +
+                "<br>GDP: $2,245,096,676";
+            } else if(currentYear >= 1600){
+                text.innerHTML =
+                "NAME: Bukhara" + 
+                "<br>POPULATION: 262,000" +
+                "<br>GDP: $1,097,865,645";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Portuguese) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1820 && currentYear <= 1829){
+                text.innerHTML =
+                "NAME: Portuguese Empire" + 
+                "<br>POPULATION: 11,900,910" +
+                "<br>GDP: $16,274,044,737";
+            } else if(currentYear >= 1800){
+                text.innerHTML =
+                "NAME: Portuguese Empire" + 
+                "<br>POPULATION: 10,140,628" +
+                "<br>GDP: $14,607,557,779";
+            } else if(currentYear >= 1650 && currentYear <= 1699){
+                text.innerHTML =
+                "NAME: Portuguese Empire" + 
+                "<br>POPULATION: 10,948,953" +
+                "<br>GDP: $9,200,002,623";
+            } else if(currentYear >= 1550 && currentYear <= 1599){
+                text.innerHTML =
+                "NAME: Portuguese Empire" + 
+                "<br>POPULATION: 6,245,930" +
+                "<br>GDP: $6,525,789,528";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Durrani) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1800 && currentYear <= 1819){
+                text.innerHTML =
+                "NAME: Durrani Empire" + 
+                "<br>POPULATION: 9,820,000" +
+                "<br>GDP: $15,522,597,530";
+            } else if(currentYear >= 1750){
+                text.innerHTML =
+                "NAME: Durrani Empire" + 
+                "<br>POPULATION: 8,864,167" +
+                "<br>GDP: $14,580,768,945";
             } else {
                 text.innerHTML = 
                 "Not Enough Data"
