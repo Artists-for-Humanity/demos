@@ -86,12 +86,13 @@ svg path:hover {
 
 #rank {
 	position: absolute;
-	top: 3%;
-	right: 3%;
+	top: 3vh;
+	right: 3vh;
 	font-weight: bold;
 	text-align: left;
 	background-color: rgba(0, 0, 0, 0.692);
 	border: 1px solid white;
 	padding: 1vh;
 	color: white;
+	min-width: 175px;
 }
