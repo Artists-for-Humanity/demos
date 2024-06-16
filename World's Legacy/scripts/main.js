@@ -66,6 +66,12 @@ $(function(){
             newMap = year1700;
         } else if(getValRange >= 1650){
             newMap = year1650;
+        } else if(getValRange >= 1600){
+            newMap = year1600;
+        } else if(getValRange >= 1550){
+            newMap = year1550;
+        } else if(getValRange >= 1500){
+            newMap = year1500;
         } else {
             newMap = '';
         }

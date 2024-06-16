@@ -51,6 +51,22 @@ const Sikh = "#39b185";
 const Bukhara = "#a6cee3";
 const Portuguese = "#005251";
 const Durrani = "#252525";
+const Mughal = "#a65628";
+const Bengal = "800026";
+const Mysore = "#806000";
+const Persia = "#72b38e";
+const Ming = "#ffff33";
+const Golconda = "#38a6a5";
+const Saadi = "#e41a1c";
+const Ahmadnagar = "#274e13";
+const Gujarat = "#38761d";
+const Merina = "#38761d";
+const Iroquois = "#0000ff";
+const Timurid = "#525252";
+const Mamluk = "#bf9000";
+const Mali = "#cc3333";
+const Mutapa = "#38a6a5";
+const Inca = "#b3de69";
 
 document.addEventListener("click", function(event) {
     if (event.target.tagName === "path") {
@@ -2450,12 +2466,12 @@ document.addEventListener("click", function(event) {
                 "<br>GDP: $2,632,798,912";
             } else if(currentYear >= 1650){
                 text.innerHTML =
-                "NAME: Bukhara" + 
+                "NAME: Yarkent Khanate" + 
                 "<br>POPULATION: 872,000" +
                 "<br>GDP: $2,245,096,676";
             } else if(currentYear >= 1600){
                 text.innerHTML =
-                "NAME: Bukhara" + 
+                "NAME: Chagatai Khanate" + 
                 "<br>POPULATION: 262,000" +
                 "<br>GDP: $1,097,865,645";
             } else {
@@ -2528,12 +2544,12 @@ document.addEventListener("click", function(event) {
                 "<br>GDP: $168,338,395,396";
             } else if(currentYear >= 1550){
                 text.innerHTML =
-                "NAME: Mughal Empire" + 
+                "NAME: Sur Empire" + 
                 "<br>POPULATION: 71,112,250" +
                 "<br>GDP: $101,099,817,691";
             } else if(currentYear >= 1500){
                 text.innerHTML =
-                "NAME: Mughal Empire" + 
+                "NAME: Delhi Sultanate" + 
                 "<br>POPULATION: 20,000,000" +
                 "<br>GDP: $59,179,007,135";
             } else {
@@ -2552,6 +2568,235 @@ document.addEventListener("click", function(event) {
                 "NAME: Bengal" + 
                 "<br>POPULATION: 10,526,000" +
                 "<br>GDP: $11,783,179,302";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Mysore) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1700 && currentYear <= 1749){
+                text.innerHTML =
+                "NAME: Mysore" + 
+                "<br>POPULATION: 8,652,063" +
+                "<br>GDP: $12,124,243,198";
+            } else if(currentYear >= 1650){
+                text.innerHTML =
+                "NAME: Mysore" + 
+                "<br>POPULATION: 7,865,531" +
+                "<br>GDP: $11,278,145,175";
+            } else if(currentYear >= 1600){
+                text.innerHTML =
+                "NAME: Mysore" + 
+                "<br>POPULATION: 14,158,000" +
+                "<br>GDP: $21,581,190,834";
+            } else if(currentYear >= 1550){
+                text.innerHTML =
+                "NAME: Vijayanagara Empire" + 
+                "<br>POPULATION: 25,150,670" +
+                "<br>GDP: $26,145,437,859";
+            } else if(currentYear >= 1500){
+                text.innerHTML =
+                "NAME: Vijayanagara Empire" + 
+                "<br>POPULATION: 18,000,000" +
+                "<br>GDP: $26,558,785,957";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Persia) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1700 && currentYear <= 1749){
+                text.innerHTML =
+                "NAME: Safavid Persia" + 
+                "<br>POPULATION: 10,000,000" +
+                "<br>GDP: $9,962,434,182";
+            } else if(currentYear >= 1650){
+                text.innerHTML =
+                "NAME: Safavid Persia" + 
+                "<br>POPULATION: 8,944,272" +
+                "<br>GDP: $10,892,449,876";
+            } else if(currentYear >= 1600){
+                text.innerHTML =
+                "NAME: Safavid Persia" + 
+                "<br>POPULATION: 7,489,000" +
+                "<br>GDP: $10,118,202,653";
+            } else if(currentYear >= 1550){
+                text.innerHTML =
+                "NAME: Safavid Persia" + 
+                "<br>POPULATION: 6,819,000" +
+                "<br>GDP: $8,359,404,038";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Ming) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1650 && currentYear <= 1699){
+                text.innerHTML =
+                "NAME: Ming China" + 
+                "<br>POPULATION: 9,000,000" +
+                "<br>GDP: $64,879,520,128";
+            } else if(currentYear >= 1600){
+                text.innerHTML =
+                "NAME: Ming China" + 
+                "<br>POPULATION: 150,000,000" +
+                "<br>GDP: $241,362,963,772";
+            } else if(currentYear >= 1550){
+                text.innerHTML =
+                "NAME: Ming China" + 
+                "<br>POPULATION: 145,000,000" +
+                "<br>GDP: $194,786,074,584";
+            } else if(currentYear >= 1500){
+                text.innerHTML =
+                "NAME: Ming China" + 
+                "<br>POPULATION: 103,000,000" +
+                "<br>GDP: $154,104,038,277";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Golconda) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1650 && currentYear <= 1699){
+                text.innerHTML =
+                "NAME: Golconda Sultanate" + 
+                "<br>POPULATION: 8,365,678" +
+                "<br>GDP: $11,415,367,350";
+            } else if(currentYear >= 1600){
+                text.innerHTML =
+                "NAME: Golconda Sultanate" + 
+                "<br>POPULATION: 7,167,411" +
+                "<br>GDP: $10,790,595,417";
+            } else if(currentYear >= 1550){
+                text.innerHTML =
+                "NAME: Golconda Sultanate" + 
+                "<br>POPULATION: 6,338,055" +
+                "<br>GDP: $8,715,145,953";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Saadi) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1650 && currentYear <= 1699){
+                text.innerHTML =
+                "NAME: Saadi Morocco" + 
+                "<br>POPULATION: 5,815,110" +
+                "<br>GDP: $2,046,373,688";
+            } else if(currentYear >= 1600){
+                text.innerHTML =
+                "NAME: Saadi Morocco" + 
+                "<br>POPULATION: 13,060,680" +
+                "<br>GDP: $2,005,770,940";
+            } else if(currentYear >= 1550){
+                text.innerHTML =
+                "NAME: Wattasid Morocco" + 
+                "<br>POPULATION: 2,056,818" +
+                "<br>GDP: $1,564,666,602";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Ahmadnagar) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1600 && currentYear <= 1649){
+                text.innerHTML =
+                "NAME: Ahmadnagar Sultanate" + 
+                "<br>POPULATION: 7,167,411" +
+                "<br>GDP: $10,790,595,417";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Gujarat) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1550 && currentYear <= 1599){
+                text.innerHTML =
+                "NAME: Gujarat Sultanate" + 
+                "<br>POPULATION: 5,070,444" +
+                "<br>GDP: $6,972,116,762";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Merina) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1550 && currentYear <= 1599){
+                text.innerHTML =
+                "NAME: Merina Kingdom" + 
+                "<br>POPULATION: 774,999" +
+                "<br>GDP: $824,320,782";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Iroquois) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1550 && currentYear <= 1599){
+                text.innerHTML =
+                "NAME: Iroquois Confederacy" + 
+                "<br>POPULATION: 23,333" +
+                "<br>GDP: $17,208,753";
+            } else if(currentYear >= 1500){
+                text.innerHTML =
+                "NAME: Iroquois Confederacy" + 
+                "<br>POPULATION: 26,666" +
+                "<br>GDP: $22,945,003";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Timurid) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1500 && currentYear <= 1549){
+                text.innerHTML =
+                "NAME: Timurid Empire" + 
+                "<br>POPULATION: 9,105,000" +
+                "<br>GDP: $13,880,438,605";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Mamluk) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1500 && currentYear <= 1549){
+                text.innerHTML =
+                "NAME: Mamluk Sultanate" + 
+                "<br>POPULATION: 7,271,500" +
+                "<br>GDP: $8,798,428,519";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Mali) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1500 && currentYear <= 1549){
+                text.innerHTML =
+                "NAME: Mali Empire" + 
+                "<br>POPULATION: 20,000,000" +
+                "<br>GDP: $687,819,012";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Mutapa) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1500 && currentYear <= 1549){
+                text.innerHTML =
+                "NAME: Mutapa Kingdom" + 
+                "<br>POPULATION: 354,499" +
+                "<br>GDP: $169,636,530";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Inca) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1500 && currentYear <= 1549){
+                text.innerHTML =
+                "NAME: Inca Empire" + 
+                "<br>POPULATION: 12,000,000" +
+                "<br>GDP: $2,905,364,090";
             } else {
                 text.innerHTML = 
                 "Not Enough Data"
