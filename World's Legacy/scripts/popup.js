@@ -2504,6 +2504,58 @@ document.addEventListener("click", function(event) {
                 text.innerHTML = 
                 "Not Enough Data"
             }
+        } else if(fillColor === Mughal) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1750 && currentYear <= 1799){
+                text.innerHTML =
+                "NAME: Mughal Empire" + 
+                "<br>POPULATION: 48,067,083" +
+                "<br>GDP: $68,098,876,024";
+            } else if(currentYear >= 1700){
+                text.innerHTML =
+                "NAME: Mughal Empire" + 
+                "<br>POPULATION: 158,400,000" +
+                "<br>GDP: $231,578,783,152";
+            } else if(currentYear >= 1650){
+                text.innerHTML =
+                "NAME: Mughal Empire" + 
+                "<br>POPULATION: 150,000,000" +
+                "<br>GDP: $198,500,692,711";
+            } else if(currentYear >= 1600){
+                text.innerHTML =
+                "NAME: Mughal Empire" + 
+                "<br>POPULATION: 115,000,000" +
+                "<br>GDP: $168,338,395,396";
+            } else if(currentYear >= 1550){
+                text.innerHTML =
+                "NAME: Mughal Empire" + 
+                "<br>POPULATION: 71,112,250" +
+                "<br>GDP: $101,099,817,691";
+            } else if(currentYear >= 1500){
+                text.innerHTML =
+                "NAME: Mughal Empire" + 
+                "<br>POPULATION: 20,000,000" +
+                "<br>GDP: $59,179,007,135";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
+        } else if(fillColor === Bengal) {
+            data.style.display = "flex"; 
+            if(currentYear >= 1750 && currentYear <= 1799){
+                text.innerHTML =
+                "NAME: Bengal" + 
+                "<br>POPULATION: 17,543,583" +
+                "<br>GDP: $22,084,287,630";
+            } else if(currentYear >= 1500 && currentYear <= 1549){
+                text.innerHTML =
+                "NAME: Bengal" + 
+                "<br>POPULATION: 10,526,000" +
+                "<br>GDP: $11,783,179,302";
+            } else {
+                text.innerHTML = 
+                "Not Enough Data"
+            }
         } else {
             data.style.display = "none";
         }
