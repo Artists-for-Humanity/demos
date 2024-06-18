@@ -1782,6 +1782,36 @@ document.addEventListener("click", function(event) {
                 "NAME: DR Congo" + 
                 "<br>POPULATION: 20,151,733" +
                 "<br>GDP: $33,043,828,367";
+            } else if(currentYear >= 1750){
+                text.innerHTML =
+                "NAME: Kongo" + 
+                "<br>POPULATION: 3,430,000" +
+                "<br>GDP: $950,598,224";
+            } else if(currentYear >= 1700){
+                text.innerHTML =
+                "NAME: Kongo" + 
+                "<br>POPULATION: 3,310,000" +
+                "<br>GDP: $873,113,469";
+            } else if(currentYear >= 1650){
+                text.innerHTML =
+                "NAME: Kongo" + 
+                "<br>POPULATION: 790,000" +
+                "<br>GDP: $834,108,574";
+            } else if(currentYear >= 1600){
+                text.innerHTML =
+                "NAME: Kongo" + 
+                "<br>POPULATION: 767,919" +
+                "<br>GDP: $795,103,680";
+            } else if(currentYear >= 1550){
+                text.innerHTML =
+                "NAME: Kongo" + 
+                "<br>POPULATION: 12,587" +
+                "<br>GDP: $725,833,155";
+            } else if(currentYear >= 1500){
+                text.innerHTML =
+                "NAME: Kongo" + 
+                "<br>POPULATION: 12,204" +
+                "<br>GDP: $656,562,631";
             } else {
                 text.innerHTML = 
                 "Not Enough Data"
@@ -2482,12 +2512,12 @@ document.addEventListener("click", function(event) {
             } else if(currentYear >= 1550){
                 text.innerHTML =
                 "NAME: Yarkent Khanate" + 
-                "<br>POPULATION: NULL" +
+                "<br>POPULATION: 520,000" +
                 "<br>GDP: $357,211,208";
             } else if(currentYear >= 1500){
                 text.innerHTML =
                 "NAME: Chagatai Khanate" + 
-                "<br>POPULATION: NULL" +
+                "<br>POPULATION: 426,000" +
                 "<br>GDP: $303,891,812";
             } else {
                 text.innerHTML = 
