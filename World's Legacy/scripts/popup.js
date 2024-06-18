@@ -2466,17 +2466,17 @@ document.addEventListener("click", function(event) {
                 "<br>GDP: $2,632,798,912";
             } else if(currentYear >= 1650){
                 text.innerHTML =
-                "NAME: Yarkent Khanate" + 
+                "NAME: Bukhara" + 
                 "<br>POPULATION: 872,000" +
                 "<br>GDP: $2,245,096,676";
             } else if(currentYear >= 1600){
                 text.innerHTML =
-                "NAME: Chagatai Khanate" + 
+                "NAME: Bukhara" + 
                 "<br>POPULATION: 262,000" +
                 "<br>GDP: $1,097,865,645";
             } else if(currentYear >= 1550){
                 text.innerHTML =
-                "NAME: Chagatai Khanate" + 
+                "NAME: Yarkent Khanate" + 
                 "<br>POPULATION: NULL" +
                 "<br>GDP: $357,211,208";
             } else if(currentYear >= 1500){
