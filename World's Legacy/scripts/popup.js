@@ -52,7 +52,7 @@ const Bukhara = "#a6cee3";
 const Portuguese = "#005251";
 const Durrani = "#252525";
 const Mughal = "#a65628";
-const Bengal = "800026";
+const Bengal = "#800026";
 const Mysore = "#806000";
 const Persia = "#72b38e";
 const Ming = "#ffff33";
@@ -989,32 +989,32 @@ document.addEventListener("click", function(event) {
                 "<br>GDP: $81,791,749,010";
             } else if(currentYear >= 1750){
                 text.innerHTML =
-                "NAME: Revolutionary France" + 
+                "NAME: Kingdom of France" +  
                 "<br>POPULATION: 47,830,251" +
                 "<br>GDP: $83,481,804,177";
             } else if(currentYear >= 1700){
                 text.innerHTML =
-                "NAME: Revolutionary France" + 
+                "NAME: Kingdom of France" + 
                 "<br>POPULATION: 23,525,586" +
                 "<br>GDP: $46,859,493,089";
             } else if(currentYear >= 1650){
                 text.innerHTML =
-                "NAME: Revolutionary France" + 
+                "NAME: Kingdom of France" + 
                 "<br>POPULATION: 20,211,025" +
                 "<br>GDP: $41,401,232,299";
             } else if(currentYear >= 1600){
                 text.innerHTML =
-                "NAME: Revolutionary France" + 
+                "NAME: Kingdom of France" + 
                 "<br>POPULATION: 18,500,000" +
                 "<br>GDP: $36,917,197,872";
             } else if(currentYear >= 1550){
                 text.innerHTML =
-                "NAME: NAME" + 
+                "NAME: Kingdom of France" + 
                 "<br>POPULATION: 16,000,000" +
                 "<br>GDP: $30,933,723,884";
             } else if(currentYear >= 1500){
                 text.innerHTML =
-                "NAME: NAME" + 
+                "NAME: Kingdom of France" + 
                 "<br>POPULATION: 16,250,000" +
                 "<br>GDP: $31,494,577,738";
             } else {
@@ -1456,6 +1456,11 @@ document.addEventListener("click", function(event) {
                 "NAME: Mexico" + 
                 "<br>POPULATION: 9,219,000" +
                 "<br>GDP: $16,846,057,964";
+            } else if(currentYear >= 1500 && currentYear <= 1549){
+                text.innerHTML =
+                "NAME: Aztec Empire" + 
+                "<br>POPULATION: 6,000,000" +
+                "<br>GDP: $5,486,150,415";
             } else {
                 text.innerHTML = 
                 "Not Enough Data"
