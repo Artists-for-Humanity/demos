@@ -2474,6 +2474,16 @@ document.addEventListener("click", function(event) {
                 "NAME: Chagatai Khanate" + 
                 "<br>POPULATION: 262,000" +
                 "<br>GDP: $1,097,865,645";
+            } else if(currentYear >= 1550){
+                text.innerHTML =
+                "NAME: Chagatai Khanate" + 
+                "<br>POPULATION: NULL" +
+                "<br>GDP: $357,211,208";
+            } else if(currentYear >= 1500){
+                text.innerHTML =
+                "NAME: Chagatai Khanate" + 
+                "<br>POPULATION: NULL" +
+                "<br>GDP: $303,891,812";
             } else {
                 text.innerHTML = 
                 "Not Enough Data"
