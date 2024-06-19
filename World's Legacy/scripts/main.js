@@ -9,27 +9,28 @@ function updateEventListeners(svgElement, storedZoom, storedTranslateX, storedTr
 
     svgElement.addEventListener('wheel', (event) => {
         event.preventDefault();
-
+    
         const rect = svgElement.getBoundingClientRect();
         const offsetX = event.clientX - rect.left;
         const offsetY = event.clientY - rect.top;
-
+    
         const delta = Math.sign(event.deltaY) * 0.1;
-        const newScale = Math.max(minScale, scale - delta);
-
+        const newScale = Math.max(1, scale - delta);
+    
         const containerCenterX = rect.width / 2;
         const containerCenterY = rect.height / 2;
-
+    
         const contentCenterX = (offsetX - translateX) / scale;
         const contentCenterY = (offsetY - translateY) / scale;
-
+    
         translateX += (containerCenterX - contentCenterX) * (1 - newScale / scale);
         translateY += (containerCenterY - contentCenterY) * (1 - newScale / scale);
-
+    
         svgElement.style.transform = `scale(${newScale}) translate(${translateX}px, ${translateY}px)`;
-
+    
         scale = newScale;
     });
+    
 
     svgElement.addEventListener('mousedown', (event) => {
         isDragging = true;
