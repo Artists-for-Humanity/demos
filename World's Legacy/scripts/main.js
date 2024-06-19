@@ -1,5 +1,9 @@
 $(function(){
     var currentMap = year2020;
+    var storedZoom = 1; 
+    var storedTranslateX = 0; 
+    var storedTranslateY = 0; 
+
     $('.range input').on('mousemove', function(){
         var getValRange = $(this).val();
         $('.range span').text(getValRange);
@@ -77,10 +81,16 @@ $(function(){
         }
 
         if (newMap !== currentMap) {
+            storedZoom = scale;
+            storedTranslateX = translateX;
+            storedTranslateY = translateY;
+
             currentMap = newMap;
             if (newMap !== '') {
                 svgContainer.fadeOut(0, function() {
-                    svgContainer.html(newMap).fadeIn(0); 
+                    svgContainer.html(newMap).fadeIn(0, function() {
+                        svgContainer.find('svg').css('transform', `scale(${storedZoom}) translate(${storedTranslateX}px, ${storedTranslateY}px)`);
+                    }); 
                 });
             } else {
                 svgContainer.fadeOut(0);
