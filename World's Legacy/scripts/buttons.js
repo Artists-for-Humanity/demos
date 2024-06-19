@@ -3,8 +3,10 @@ let count_copy = 2;
 let audio = document.getElementById("audio");
 let info = document.getElementById("info");
 
-function refresh(){
-    window.location.reload();
+function refresh() {
+    const svgContainer = document.getElementById('svgContainer');
+    const svg = svgContainer.querySelector('svg');
+    svg.style.transform = 'scale(1) translate(0, 0)';
 }
 
 function play(){
@@ -35,3 +37,4 @@ function copy(){
     }
     count_copy++;
 }
+
