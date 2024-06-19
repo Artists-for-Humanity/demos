@@ -16,7 +16,7 @@ svgContainer.addEventListener('wheel', (event) => {
     const offsetY = event.clientY - rect.top;
 
     const delta = Math.sign(event.deltaY) * zoomFactor;
-    const newScale = Math.max(0.1, scale - delta);
+    const newScale = Math.max(1, scale - delta);
 
     const containerCenterX = rect.width / 2;
     const containerCenterY = rect.height / 2;
