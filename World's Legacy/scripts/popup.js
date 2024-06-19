@@ -18,7 +18,7 @@ const USA = "#081d58";
 const India = "#e17c05";
 const Japan = "#aa1f4b";
 const Germany = "#000000";
-const Russia = "#f7fcfd";
+const Russia = "#ffffff";
 const Indonesia = "#fb8072";
 const Brazil = "#33a02c";
 const France = "#023858"
@@ -59,13 +59,13 @@ const Ming = "#ffff33";
 const Golconda = "#38a6a5";
 const Saadi = "#e41a1c";
 const Ahmadnagar = "#274e13";
-const Gujarat = "#38761d";
-const Merina = "#38761d";
+const Gujarat = "#7a3d00";
+const Merina = "#3b761e";
 const Iroquois = "#0000ff";
 const Timurid = "#525252";
 const Mamluk = "#bf9000";
 const Mali = "#cc3333";
-const Mutapa = "#38a6a5";
+const Mutapa = "#0bceaf";
 const Inca = "#b3de69";
 
 document.addEventListener("click", function(event) {
