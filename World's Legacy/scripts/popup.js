@@ -2877,5 +2877,7 @@ document.addEventListener("click", function(event) {
 
         data.style.top = mouseY + "px";
         data.style.left = mouseX + "px";
+    } else {
+        data.style.display = "none";
     }
 });
