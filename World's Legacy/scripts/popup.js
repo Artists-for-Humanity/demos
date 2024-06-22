@@ -712,7 +712,7 @@ document.addEventListener("click", function(event) {
             } else if(currentYear >= 1920){
                 text.innerHTML =
                 "NAME: Soviet Russia" + 
-                "<br>POPULATION: " + formatNumber("168,832,000") +
+                "<br>POPULATION: " + formatNumber("137,727,000") +
                 "<br>GDP: $" + formatNumber("175,723,406,510");
             } else if(currentYear >= 1910){
                 text.innerHTML =
@@ -1471,6 +1471,11 @@ document.addEventListener("click", function(event) {
                 "NAME: Mexico" + 
                 "<br>POPULATION: " + formatNumber("9,219,000") +
                 "<br>GDP: $" + formatNumber("16,846,057,964");
+            } else if(currentYear >= 1870){
+                text.innerHTML =
+                "NAME: Mexico" + 
+                "<br>POPULATION: " + formatNumber("9,219,000") +
+                "<br>GDP: $" + formatNumber("11,952,166,223");
             } else if(currentYear >= 1500 && currentYear <= 1549){
                 text.innerHTML =
                 "NAME: Aztec Empire" + 
@@ -2220,6 +2225,11 @@ document.addEventListener("click", function(event) {
                 "NAME: Sweden-Norway" + 
                 "<br>POPULATION: " + formatNumber("5,901,665") +
                 "<br>GDP: $" + formatNumber("15,746,930,666");
+            } else if(currentYear >= 1850){
+                text.innerHTML =
+                "NAME: Sweden-Norway" + 
+                "<br>POPULATION: " + formatNumber("4,856,703") +
+                "<br>GDP: $" + formatNumber("10,159,258,370");
             } else {
                 text.innerHTML = 
                 "Not Enough Data"
