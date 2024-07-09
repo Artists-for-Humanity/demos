@@ -1283,7 +1283,7 @@ document.addEventListener("click", function(event) {
                 text.innerHTML =
                 "NAME: Ottoman Empire" + 
                 "<br>POPULATION: " + formatNumber("12,640,000") +
-                "<br>GDP: $" + formatNumber("338,918,542,676");
+                "<br>GDP: $" + formatNumber("11,469,347,707");
             } else {
                 text.innerHTML = 
                 "Not Enough Data"

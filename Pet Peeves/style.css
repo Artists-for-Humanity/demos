@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    background-color: gray;
+    background-image: url(assets/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.right_side{ 
+    background-color: burlywood;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.tool {
+    height: 200px;
+    width: 200px;
+    display: grid;
+    place-items: center;
+}
+
+#money {
+    background-color: greenyellow;
+    border-radius: 0;
+}
+
+.bar_container{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 75%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sun {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(assets/sun.png);
+    height: 200px;
+    width: 200px;
+    margin: 30px 0px 0px 30px;
+    display: grid;
+    place-items: center;
+}
+
+.bar {
+    width: 80%;
+    background-color: white;
+    height: 50px;
+    border-radius: 15px;
+}
+
+.bar:nth-child(1){
+    border: 5px solid yellow;
+}
+
+.bar:nth-child(2){
+    border: 5px solid orange;
+}
+
+.bar:nth-child(3){
+    border: 5px solid cyan;
+}
+
+.bar:nth-child(1), .bar:nth-child(2){
+    margin-bottom: 60px;
+}
+
+#joy {
+    width: 50%;
+    background-color: #FF756F;
+    height: 50px;
+}
+
+#hunger {
+    width: 70%;
+    background-color: #F9D675;
+    height: 50px;
+}
+
+#hygiene {
+    width: 20%;
+    background-color: #B3F376;
+    height: 50px;
+}
+
+#dog {
+    position: absolute;
+    bottom: 410px;
+    left: 600px;
+    background-image: url(assets/main/normal_dog.png);
+    height: 325px;
+    width: 325px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#food, #toys, #clean {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#food {
+    background-image: url(assets/food.png);
+}
+
+#toys {
+    background-image: url(assets/toys.png);  
+}
+
+#clean {
+    background-image: url(assets/clean.png);  
+}
