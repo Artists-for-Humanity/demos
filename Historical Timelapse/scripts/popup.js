@@ -1674,7 +1674,7 @@ document.addEventListener("click", function(event) {
             if(currentYear >= 2022){
                 text.innerHTML =
                 "NAME: Ethiopia" + 
-                "<br>POPULATION: " + formatNumber("23,263,512") +
+                "<br>POPULATION: " + formatNumber("123,263,512") +
                 "<br>GDP: $" + formatNumber("346,893,000,000");
             } else if(currentYear >= 2020){
                 text.innerHTML =
@@ -2315,12 +2315,12 @@ document.addEventListener("click", function(event) {
             data.style.display = "flex"; 
             if(currentYear >= 1930 && currentYear <= 1940){
                 text.innerHTML =
-                "NAME: NAME" + 
+                "NAME: Czechoslovakia" + 
                 "<br>POPULATION: " + formatNumber("13,964,000") +
                 "<br>GDP: $" + formatNumber("80,723,411,351");
             } else if(currentYear >= 1920){
                 text.innerHTML =
-                "NAME: NAME" + 
+                "NAME: Czechoslovakia" + 
                 "<br>POPULATION: " + formatNumber("12,979,000") +
                 "<br>GDP: $" + formatNumber("49,563,738,350");
             } else {
