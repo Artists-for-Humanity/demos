@@ -194,11 +194,6 @@ document.addEventListener("click", function(event) {
             } else if(currentYear >= 1800){
                 text.innerHTML = 
                 "NAME: Qing China" + 
-                "<br>POPULATION: " + formatNumber("353,377,700") +
-                "<br>GDP: $" + formatNumber("393,223,436,333");
-            } else if(currentYear >= 1750){
-                text.innerHTML = 
-                "NAME: Qing China" + 
                 "<br>POPULATION: " + formatNumber("330,000,000") +
                 "<br>GDP: $" + formatNumber("316,818,059,260");
             } else if(currentYear >= 1750){
@@ -2380,7 +2375,7 @@ document.addEventListener("click", function(event) {
                 "<br>POPULATION: " + formatNumber("19,207,988") +
                 "<br>GDP: $" + formatNumber("41,921,329,676");
             } else if(currentYear >= 1700){
-                text.innerHTML =
+               text.innerHTML =
                 "NAME: Habsburg Austria" + 
                 "<br>POPULATION: " + formatNumber("9,989,000") +
                 "<br>GDP: $" + formatNumber("12,836,407,925");
