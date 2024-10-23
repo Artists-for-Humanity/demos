@@ -233,7 +233,7 @@ function updateRanks() {
 
 $(function(){
     updateTrackYear();
-    $('.range input').on('input', updateTrackYear); // Changed 'mousemove' to 'input'
+    $('.range input').on('input', updateTrackYear);
 });
 
 document.addEventListener("DOMContentLoaded", function(){
