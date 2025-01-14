@@ -149,11 +149,60 @@ nav ul li {
     height: 100%;
     padding-top: 50px;
     display: flex;
-    align-items: space-around;
+    justify-content: space-around;
 }
 
 .action-card {
     height: 100%;
     width: 33.333%;
-    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    max-width: 350px;
+}
+
+.action-image {
+    height: 175px;
+    width: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E3E3E3;
+    border-radius: 50%;
+    color: white;
+    font-size: 5rem;
+}
+
+.action-text {
+    display: flex;
+}
+
+.action-number {
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.action-heading {
+    font-size: 1.5rem;
+    font-weight: 500; 
+    padding-bottom: 12.5px;
+}
+
+/* events-container */
+
+.events-container {
+    display: flex;
+}
+
+.slider {
+    min-height: calc(350px - 100px);
+    width: 50%;
+}
+
+.event-info {
+    width: 50%;
 }
