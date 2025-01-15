@@ -122,6 +122,11 @@ nav ul li {
     height: 240px;
     background-color: #D9D9D9;
     border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    color: white;
 }
 
 /* cta container */
@@ -195,14 +200,200 @@ nav ul li {
 /* events-container */
 
 .events-container {
+    height: 350px;
     display: flex;
 }
 
 .slider {
-    min-height: calc(350px - 100px);
     width: 50%;
+    display: flex;
+}
+
+.event-display {
+    width: calc(100% - 130px);
+    height: 100%;
+    background-color: #E3E3E3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slider-button-left, .slider-button-right {
+    height: 100%;
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E3E3E3;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.slider-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.slider-image {
+    font-size: 7rem;
+    color: white;
+    padding: 35px 0;
+}
+
+.slider-place {
+    display: flex;
+}
+
+.slider-place div {
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.slider-place div:nth-child(2){
+    margin: 0 10px;
 }
 
 .event-info {
     width: 50%;
+    padding: 25px;
+}
+
+.event-info div {
+    margin-bottom: 25px;
+}
+
+.event-name, .join-us, .event-time, .event-location {
+    font-size: 1.5rem;
+}
+
+.event-name, .event-time {
+    font-weight: bold;
+}
+
+.join-us, .event-location {
+    font-weight: lighter;
+}
+
+.event-location {
+    padding-right: 125px;
+}
+
+/* clients-container */
+
+.clients-container {
+    display: flex;
+    margin-bottom: 50px;
+    width: calc(100% + 50px);
+    margin-left: -75px;
+    height: 400px;
+    padding: 0 50px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.client-card {
+    height: 85%;
+    width: calc(30% - 85px);
+    background-color: #D9D9D9;
+    padding: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.client-card:nth-child(2){
+    height: 100%;
+    background-color: #BEBEBE;
+}
+
+.client-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-image div {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #BEBEBE;
+    font-size: 2rem;
+    color: white;
+    border-radius: 50%;
+}
+
+/* articles-container */
+
+.articles-container {
+    background-color: #D9D9D9;
+    display: flex;
+    margin-bottom: 50px;
+    width: calc(100% + 50px);
+    margin-left: -75px;
+    height: 575px;
+    padding: 50px;
+    padding-bottom: 0px;
+    flex-direction: column;
+}
+
+.articles-main {
+    width: 100%;
+    height: 90%;
+}
+
+.articles-slide {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.articles-slide div {
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.articles-slide div:nth-child(2){
+    margin: 0 10px 0 10px;
+}
+
+.articles-slide div:nth-child(3){
+    margin: 0 10px 0 0;
+}
+
+.articles-text {
+    width: 45%;
+    height: 100%;
+}
+
+.articles-text button {
+    width: 150px;
+    height: 35px;
+    background-color: transparent;
+    color: #000;
+    border: 1px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.article-info {
+    height: 90%;
+}
+
+.article-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 25px;
 }
