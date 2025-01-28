@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+		<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+		<title>Creative Technology</title>
+	</head>
+	<body>
+		<div class='dashboard'>
+			<div class="dashboard-nav">
+				<header>
+					<a href="#" class="menu-toggle"><i class="fas fa-bars"></i></a>
+					<div class="brand-logo"><span>WELCOME</span></div>
+				</header>
+				<nav class="dashboard-nav-list">
+					<a href="#" class="dashboard-nav-item active" onclick="changeActive('leaderboard-app')"><i class="fas fa-crown"></i>Leaderboard</a>
+					<a href="#" class="dashboard-nav-item" onclick="changeActive('tickets-app')"><i class="fas fa-ticket"></i>Tickets</a>
+					<a href="#" class="dashboard-nav-item" onclick="changeActive('guidelines-app')"><i class="fas fa-handshake"></i>Guidelines</a>
+					<div class="nav-item-divider"></div>
+					<a href="https://afhtokens.netlify.app" class="dashboard-nav-item"><i class="fas fa-arrow-left"></i>Logout</a>
+				</nav>
+			</div>
+			<div class='dashboard-app current leaderboard-app'>
+				<header class='dashboard-toolbar'>
+					<a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+                    <span>LEADERBOARD</span>
+				</header>
+				<div class='dashboard-content'>
+					<div class='container'></div>
+				</div>
+			</div>
+			<div class='dashboard-app tickets-app'>
+				<header class='dashboard-toolbar'>
+					<a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+                    <span>TICKETS</span>
+				</header>
+				<div class='dashboard-content' style="overflow: auto;">
+					<div class='container'>
+						<div id="pending">
+							<div class='card' id="template-container" style="display: none;">
+								<div class='card-body'>
+									<span class="request-details"></span>
+								</div>
+								<div class='card-body' style="padding-top: 0;">
+									<span class="judge">
+										<div class="fas fa-x" id="deny"></div>
+										<div class="fas fa-check" id="approve"></div>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class='dashboard-app user-panel'>
+				<header class='dashboard-toolbar'>
+					<a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+					<span id="curr-title"></span>
+				</header>
+				<div class='dashboard-content'>
+					<div class='container'>
+						<div class='card'>
+							<div class='card-body'>
+								<span>Name</span>
+								<input id="curr-name" type="text"></input>
+							</div>
+						</div>
+						<div class='card'>
+							<div class='card-body'>
+								<span>Password</span>
+								<input id="curr-password" type="text"></input>
+							</div>
+						</div>
+						<div class='card'>
+							<div class='card-body'>
+								<span>Tokens</span>
+								<input id="curr-tokens" type="number" min="0"></input>
+							</div>
+						</div>
+						<div class='card'>
+							<div class='card-body' style="display: flex; justify-content: space-evenly;">
+								<span class="fas fa-hammer" id="kick"></span>
+								<span class="fas fa-x" id="cancel"></span>
+								<span class="fas fa-check" id="save"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='dashboard-app guidelines-app'>
+				<header class='dashboard-toolbar'>
+					<a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+                    <span>GUIDELINES</span>
+				</header>
+				<div class='dashboard-content'>
+					<div class='container'>
+						<div class='card'>
+							<div class='card-body'>
+								<span><b>1. Be Respectful</b> - Do not abuse this tool with any malicious intent.</span>
+							</div>
+						</div>
+						<div class='card'>
+							<div class='card-body'>
+								<span><b>2. No Spam</b> - Avoid making irrelevant or repetitive tickets.</span>
+							</div>
+						</div>
+						<div class='card'>
+							<div class='card-body'>
+								<span><b>3. Pooling Tokens</b> - For community rewards, an individual may only contribute 50% of their tokens.</span>
+							</div>
+						</div>
+						<div class="card table" style="height: calc(392px - 8px);">
+							<div class="card-body">
+								<table>
+									<tr>
+										<th>Examples of Ways to Earn Tokens</th>
+										<th>Reward</th>
+									</tr>
+									<tr>
+										<td>Complete a Project</td>
+										<td>15 Tokens</td>
+									</tr>
+									<tr>
+										<td>Help Peer Complete a Project</td>
+										<td>15 Tokens</td>
+									</tr>
+									<tr>
+										<td>Support a Client Project</td>
+										<td>15 Tokens</td>
+									</tr>
+									<tr>
+										<td>Beat Snake Game High Score (112)</td>
+										<td>12 Tokens</td>
+									</tr>
+									<tr>
+										<td>Speak to Touring Group</td>
+										<td>10 Tokens</td>
+									</tr>
+									<tr>
+										<td>Clean and Organize the Studio</td>
+										<td>10 Tokens</td>
+									</tr>
+									<tr>
+										<td>Complete Task Before Due Date</td>
+										<td>5 Tokens</td>
+									</tr>
+									<tr>
+										<td>Assist Someone on a Project</td>
+										<td>5 Tokens</td>
+									</tr>
+									<tr>
+										<td>Device QA Annual Report</td>
+										<td>5 Tokens</td>
+									</tr>
+									<tr>
+										<td>100% Attendance for the Week</td>
+										<td>3 Tokens</td>
+									</tr>
+								</table>
+							</div>
+						</div>						
+						<div class="card table" style="height: calc(296px - 8px);">
+							<div class="card-body">
+								<table>
+									<tr>
+										<th>Examples of Ways to Spend Tokens</th>
+										<th>Price</th>
+									</tr>
+									<tr>
+										<td>Korean Fried Chicken Party</td>
+										<td>100 Tokens</td>
+									</tr>
+									<tr>
+										<td>Pizza Party</td>
+										<td>100 Tokens</td>
+									</tr>
+									<tr>
+										<td>Wingstop Party</td>
+										<td>100 Tokens</td>
+									</tr>
+									<tr>
+										<td>Studio Movie Night</td>
+										<td>50 Tokens</td>
+									</tr>
+									<tr>
+										<td>Studio Game Night</td>
+										<td>45 Tokens</td>
+									</tr>
+									<tr>
+										<td>Miscellaneous</td>
+										<td>20 Tokens</td>
+									</tr>
+									<tr>
+										<td>Mystery Snack</td>
+										<td>5 Tokens</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
