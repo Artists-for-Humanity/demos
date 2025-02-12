@@ -347,6 +347,19 @@ td:last-child {
     text-align: right;
 }
 
+#no-tickets {
+    width: 100%; 
+    height: calc(100vh - 135px); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+#no-tickets img {
+    height: 50%; 
+    width: auto;
+}
+
 @media (min-width: 992px) {
     .dashboard-app {
         margin-left: 238px;

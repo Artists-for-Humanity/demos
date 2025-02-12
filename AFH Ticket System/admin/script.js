@@ -21,6 +21,8 @@ firebase.initializeApp(firebaseConfig);
 const fireBaseRef = firebase.database().ref('requests');
 const usersRef = firebase.database().ref('users');
 const leaderboardDiv = document.querySelector('.container');
+
+const noTickets = document.getElementById('no-tickets')
 const pendingDiv = document.getElementById('pending');
 
 function updateLeaderboard() {
@@ -59,6 +61,10 @@ function updateLeaderboard() {
 updateLeaderboard();
 
 function createRequestContainer(requestData, requestId) {
+
+    noTickets.style.display = 'none'
+    pendingDiv.style.display = 'block'
+
     if (document.getElementById(requestId)) {
         return;
     }
