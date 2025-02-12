@@ -104,8 +104,8 @@ function deleteRequest(requestId) {
 }
 
 function checkEmpty() {
-    const cardList = document.querySelectorAll('.card');
-    if (cardList.length === 1) {
+    const cardList = document.querySelectorAll('.request-details');
+    if (cardList.length === 2) {
         noTickets.style.display = 'flex';
     }
 }
