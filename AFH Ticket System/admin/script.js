@@ -82,10 +82,12 @@ function createRequestContainer(requestData, requestId) {
 
     newContainer.querySelector('#deny').addEventListener('click', () => {
         deleteRequest(requestId);
+        checkEmpty()
     });
 
     newContainer.querySelector('#approve').addEventListener('click', () => {
         approveRequest(requestData.username, requestData.amount, requestId);
+        checkEmpty()
     });
 
     pendingDiv.appendChild(newContainer);
@@ -99,6 +101,13 @@ function deleteRequest(requestId) {
                 requestContainer.remove();
             }
         });
+}
+
+function checkEmpty() {
+    const cardList = document.querySelectorAll('.card');
+    if (cardList.length === 1) {
+        noTickets.style.display = 'flex';
+    }
 }
 
 function approveRequest(username, amount, requestId) {
