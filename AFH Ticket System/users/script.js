@@ -14,7 +14,7 @@ firebase.initializeApp(firebaseConfig);
 document.addEventListener("DOMContentLoaded", function() {
     const username = sessionStorage.getItem('username');
     if (!username) {
-        window.location = "https://afhtokens.netlify.app/";
+        window.location = "../index.html";
     }
 });
 

@@ -50,7 +50,7 @@ registerForm.addEventListener('submit', function(event) {
                 isAdmin: isAdmin
             })
             .then(() => {
-                window.location.href = 'https://afhtokens.netlify.app/users/';
+                window.location.href = 'users/index.html';
             })
             .catch((error) => {
                 console.error('Error:', error.message);
@@ -74,9 +74,9 @@ loginForm.addEventListener('submit', function(event) {
                 userFound = true;
                 sessionStorage.setItem('username', userData.username);
                 if (userData.isAdmin) {
-                    window.location.href = 'https://afhtokens.netlify.app/admin/'; 
+                    window.location.href = 'admin/index.html'; 
                 } else {
-                    window.location.href = 'https://afhtokens.netlify.app/users/';
+                    window.location.href = 'users/index.html';
                 }
             }
         });
