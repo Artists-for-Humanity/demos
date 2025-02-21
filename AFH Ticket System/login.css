@@ -15,7 +15,6 @@ body {
 
 .login-page {
 	width: 360px;
-	padding: 8% 0 0;
 	margin: auto;
 }
 
@@ -24,7 +23,6 @@ body {
 	z-index: 1;
 	background: #FFFFFF;
 	max-width: 360px;
-	margin: 0 auto 100px;
 	padding: 45px;
 	text-align: center;
 }
@@ -131,4 +129,14 @@ body {
 
 #logo {
 	width: 50%;
+}
+
+@media (max-width: 435px){
+	body{
+		background-color: white;
+	}
+
+	.form {
+		padding: 0 20px;
+	}
 }

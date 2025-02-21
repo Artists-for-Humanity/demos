@@ -338,8 +338,13 @@ th:last-child {
     text-align: right;
 }
 
+tr:not(:first-child):hover {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
 td {
-    padding: 0 0 8px 0;
+    padding: 4px 0 4px 0;
     text-align: left;
 }
 
