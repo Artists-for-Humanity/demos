@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="../styles/general.css">
+		<link rel="stylesheet" href="../styles/admin.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 		<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 		<title>Creative Technology</title>
@@ -84,7 +85,7 @@
 							</div>
 						</div>
 						<div class='card'>
-							<div class='card-body' style="display: flex; justify-content: space-evenly;">
+							<div class='card-body settings'>
 								<span class="fas fa-hammer" id="kick"></span>
 								<span class="fas fa-x" id="cancel"></span>
 								<span class="fas fa-check" id="save"></span>
@@ -115,82 +116,7 @@
 								<span><b>3. Pooling Tokens</b> - For community rewards, an individual may only contribute 50% of their tokens.</span>
 							</div>
 						</div>
-						<div class="card table" style="height: calc(392px - 8px);">
-							<div class="card-body">
-								<table>
-									<tbody><tr>
-										<th>Examples of Ways to Earn Tokens</th>
-										<th>Reward</th>
-									</tr>
-									<tr>
-										<td>Complete a Project</td>
-										<td>15 Tokens</td>
-									</tr>
-									<tr>
-										<td>Help Peer Complete a Project</td>
-										<td>10 Tokens</td>
-									</tr>
-									<tr>
-										<td>Support a Client Project</td>
-										<td>10 Tokens</td>
-									</tr>
-									<tr>
-										<td>Speak to Touring Group</td>
-										<td>10 Tokens</td>
-									</tr>
-									<tr>
-										<td>Clean and Organize the Studio</td>
-										<td>10 Tokens</td>
-									</tr>
-									<tr>
-										<td>Complete Task Before Due Date</td>
-										<td>5 Tokens</td>
-									</tr>
-									<tr>
-										<td>Assist Someone on a Project</td>
-										<td>5 Tokens</td>
-									</tr>
-									<tr>
-										<td>100% Attendance for the Week</td>
-										<td>3 Tokens</td>
-									</tr>
-								</tbody></table>
-							</div>
-						</div>				
-						<div class="card table" style="height: calc(296px - 8px);">
-							<div class="card-body">
-								<table>
-									<tbody><tr>
-										<th>Examples of Ways to Spend Tokens</th>
-										<th>Price</th>
-									</tr>
-									<tr>
-										<td>Korean Fried Chicken Party</td>
-										<td>100 Tokens</td>
-									</tr>
-									<tr>
-										<td>Pizza Party</td>
-										<td>100 Tokens</td>
-									</tr>
-									<tr>
-										<td>Wingstop Party</td>
-										<td>100 Tokens</td>
-									</tr>
-									<tr>
-										<td>Studio Movie Night</td>
-										<td>50 Tokens</td>
-									</tr>
-									<tr>
-										<td>Studio Game Night</td>
-										<td>50 Tokens</td>
-									</tr>
-									<tr>
-										<td>Miscellaneous</td>
-										<td>20 Tokens</td>
-									</tr>
-								</tbody></table>
-							</div>
-						</div>
+						<div class="tables-container"></div>
 					</div>
 				</div>
 			</div>
@@ -198,6 +124,8 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
-		<script src="script.js"></script>
+		<script src="../scripts/firebase.js"></script>
+		<script src="../scripts/admin.js"></script>
+		<script src="../scripts/tables.js"></script>
 	</body>
 </html>

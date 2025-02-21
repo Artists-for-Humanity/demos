@@ -285,44 +285,6 @@ a:hover {
     background-color: rgba(236, 238, 239, 0.3);
 }
 
-.judge {
-    justify-content: space-evenly; 
-    width: 100%; 
-    display: flex;
-}
-
-.fas {
-    cursor: pointer;
-    transition: 0.5s;
-    font-size: 1rem;
-}
-
-.fas:hover {
-    color: #f26532;
-}
-
-.fa-gear {
-    margin-right: 0.75rem;
-}
-
-input {
-    text-align: right;
-    font-size: 1rem;
-    background-color: #fff;
-    color: #515151;
-    border: none;
-}
-
-input:focus {
-    outline: none;
-}
-
-#curr-tokens::-webkit-outer-spin-button,
-#curr-tokens::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -339,30 +301,17 @@ th:last-child {
 }
 
 tr:not(:first-child):hover {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
 }
 
 td {
-    padding: 4px 0 4px 0;
+    padding: 8px 0 8px 0;
     text-align: left;
 }
 
 td:last-child {
     text-align: right;
-}
-
-#no-tickets {
-    width: 100%; 
-    height: calc(100vh - 135px); 
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-}
-
-#no-tickets img {
-    height: 50%; 
-    width: auto;
 }
 
 @media (min-width: 992px) {

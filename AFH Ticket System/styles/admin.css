@@ -1,0 +1,57 @@
+.settings {
+    display: flex; 
+    justify-content: space-evenly; 
+    height: 64px; 
+    align-items: center;
+}
+
+.judge {
+    justify-content: space-evenly;
+    width: 100%;
+    display: flex;
+}
+
+.fas {
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 1rem;
+}
+
+.fas:hover {
+    color: #f26532;
+}
+
+.fa-gear {
+    margin-right: 0.75rem;
+}
+
+input {
+    text-align: right;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #515151;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+#curr-tokens::-webkit-outer-spin-button, #curr-tokens::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+#no-tickets {
+    width: 100%; 
+    height: calc(100vh - 135px); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+#no-tickets img {
+    height: 50%; 
+    width: auto;
+}
