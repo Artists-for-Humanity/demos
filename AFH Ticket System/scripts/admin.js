@@ -1,9 +1,9 @@
-const mobileScreen = window.matchMedia("(max-width: 990px )");
+const mobileScreen = window.matchMedia("(max-width: 990px)");
 
 document.addEventListener("DOMContentLoaded", function() {
     const username = sessionStorage.getItem('username');
     if (!username) {
-        window.location = "../index";
+        window.location = "../index.html";
     }
 });
 
@@ -17,20 +17,42 @@ const pendingDiv = document.getElementById('pending');
 function updateLeaderboard() {
     usersRef.on('value', (snapshot) => {
         const users = [];
+        let studioContributions = null;
 
         snapshot.forEach((childSnapshot) => {
             const userData = childSnapshot.val();
             if (!userData.isAdmin) {
-                users.push({
+                const userObj = {
                     name: userData.username || 'Unknown',
                     tokens: userData.tokens || 0,
                     password: userData.password || 'Undefined'
-                });
+                };
+                if (userObj.name === "STUDIO CONTRIBUTIONS") {
+                    studioContributions = userObj;
+                } else {
+                    users.push(userObj);
+                }
             }
         });
 
         users.sort((a, b) => b.tokens - a.tokens);
         leaderboardDiv.innerHTML = '';
+
+        if (studioContributions) {
+            const studioDiv = document.createElement('div');
+            studioDiv.className = 'card pool';
+            studioDiv.innerHTML = `
+                <div class='card-body'>
+                    <span>
+                        <span class="fas fa-gear" onclick="logUserInfo('${studioContributions.name}', ${studioContributions.tokens}, '${studioContributions.password.replace(/'/g, "\\'")}')"></span>
+                        <span>${studioContributions.name}</span>
+                    </span>
+                    <span>${studioContributions.tokens} Tokens</span>
+                </div>
+            `;
+            leaderboardDiv.appendChild(studioDiv);
+        }
+
         users.forEach(user => {
             const accountDiv = document.createElement('div');
             accountDiv.className = 'card';
@@ -44,7 +66,7 @@ function updateLeaderboard() {
                 </div>
             `;
             leaderboardDiv.appendChild(accountDiv);
-        });        
+        });
     });
 }
 updateLeaderboard();

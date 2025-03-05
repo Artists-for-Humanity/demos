@@ -29,15 +29,15 @@ registerForm.addEventListener('submit', function(event) {
                 document.getElementById("register").innerText = "REGISTER";
             }, 1000);
         } else {
-            const isAdmin = username === 'ADMIN';
-            fireBaseRef.child('users').push({
+            fireBaseRef.child('users').child(username).set({
                 username: username,
                 password: password,
                 tokens: tokens,
-                isAdmin: isAdmin
-            })
+                isAdmin: false
+            })            
             .then(() => {
-                window.location.href = '../pages/admin.html';
+                sessionStorage.setItem('username', username);
+                window.location.href = '../pages/users.html';
             })
             .catch((error) => {
                 console.error('Error:', error.message);

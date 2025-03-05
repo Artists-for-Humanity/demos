@@ -315,6 +315,11 @@ td:last-child {
     text-align: right;
 }
 
+.pool {
+    background-color: #f26532;
+    color: white;
+}
+
 @media (min-width: 992px) {
     .dashboard-app {
         margin-left: 238px;

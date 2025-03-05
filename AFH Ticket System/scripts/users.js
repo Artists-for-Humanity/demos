@@ -1,5 +1,3 @@
-const mobileScreen = window.matchMedia("(max-width: 990px )");
-
 document.addEventListener("DOMContentLoaded", function() {
     const username = sessionStorage.getItem('username');
     if (!username) {
@@ -23,19 +21,38 @@ function addRequest(amount, reason, username) {
 function updateLeaderboard() {
     usersRef.on('value', (snapshot) => {
         const users = [];
+        let studioContributions = null;
 
         snapshot.forEach((childSnapshot) => {
             const userData = childSnapshot.val();
             if (!userData.isAdmin) {
-                users.push({
+                const userObj = {
                     name: userData.username || 'Unknown',
                     tokens: userData.tokens || 0
-                });
+                };
+                if (userObj.name === "STUDIO CONTRIBUTIONS") {
+                    studioContributions = userObj;
+                } else {
+                    users.push(userObj);
+                }
             }
         });
 
         users.sort((a, b) => b.tokens - a.tokens);
-        leaderboardDiv.innerHTML = '';
+        leaderboardDiv.innerHTML = ``;
+
+        if (studioContributions) {
+            const studioDiv = document.createElement('div');
+            studioDiv.className = 'card pool';
+            studioDiv.innerHTML = `
+                <div class='card-body'>
+                    <span>${studioContributions.name}</span>
+                    <span>${studioContributions.tokens} Tokens</span>
+                </div>
+            `;
+            leaderboardDiv.appendChild(studioDiv);
+        }
+
         users.forEach(user => {
             const accountDiv = document.createElement('div');
             accountDiv.className = 'card';
