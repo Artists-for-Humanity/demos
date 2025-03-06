@@ -30,7 +30,7 @@ function updateLeaderboard() {
                     name: userData.username || 'Unknown',
                     tokens: userData.tokens || 0
                 };
-                if (userObj.name === "STUDIO CONTRIBUTIONS") {
+                if (userObj.name === "CREATIVE TECHNOLOGY") {
                     studioContributions = userObj;
                 } else {
                     users.push(userObj);
@@ -68,6 +68,42 @@ function updateLeaderboard() {
 }
 updateLeaderboard();
 
+tokenRequestForm.querySelector('select[name="category"]').addEventListener('change', function () {
+    const category = this.value;
+    const amountInput = tokenRequestForm.querySelector('input[name="amount"]');
+    const reasonInput = tokenRequestForm.querySelector('textarea[name="reason"]');
+    const username = sessionStorage.getItem('username');
+
+    if (category === "Contribute 50% to Studio") {
+        usersRef.orderByChild('username').equalTo(username).once('value', (snapshot) => {
+            const userData = snapshot.val();
+            if (userData) {
+                const user = Object.values(userData)[0];
+                const userTokens = user.tokens || 0;
+                const halfTokens = Math.ceil(userTokens / 2);
+
+                amountInput.value = halfTokens;
+                reasonInput.value = `Share 50% of your tokens to the studio. This is a one time use for each individual until an administrator approves otherwise.`;
+
+                amountInput.setAttribute("disabled", true);
+                reasonInput.setAttribute("disabled", true);
+
+                amountInput.style.cursor = "not-allowed";
+                reasonInput.style.cursor = "not-allowed";
+            }
+        });
+    } else {
+        amountInput.removeAttribute("disabled");
+        reasonInput.removeAttribute("disabled");
+
+        amountInput.style.cursor = "auto";
+        reasonInput.style.cursor = "auto";
+
+        amountInput.value = "";
+        reasonInput.value = "";
+    }
+});
+
 tokenRequestForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -80,7 +116,50 @@ tokenRequestForm.addEventListener('submit', (event) => {
         amount *= -1;
     }
 
-    if (username) {
+    if (category === 'Contribute 50% to Studio') {
+        usersRef.orderByChild('username').equalTo(username).once('value', (snapshot) => {
+            const userData = snapshot.val();
+            if (userData) {
+                const userKey = Object.keys(userData)[0];
+                const user = userData[userKey];
+                const userTokens = user.tokens || 0;
+                const halfTokens = Math.ceil(userTokens / 2);
+    
+                if (halfTokens > 0 && !user.isPooled) {
+                    usersRef.child(userKey).update({
+                        tokens: userTokens - halfTokens,
+                        isPooled: true
+                    });
+
+                    usersRef.orderByChild('username').equalTo('CREATIVE TECHNOLOGY').once('value', (studioSnapshot) => {
+                        const studioData = studioSnapshot.val();
+                        if (studioData) {
+                            const studioKey = Object.keys(studioData)[0]; 
+                            const studio = studioData[studioKey];
+                            const studioTokens = studio.tokens || 0;
+    
+                            usersRef.child(studioKey).update({
+                                tokens: studioTokens + halfTokens
+                            });
+                        }
+                    });
+
+                    tokenRequestForm.reset();
+                    document.getElementById('submit').innerText = 'SUBMITTED';
+                    setTimeout(() => {
+                        document.getElementById('submit').innerText = 'Submit';
+                    }, 1000);
+                } else {
+                    document.getElementById('submit').innerText = 'INVALID';
+                    setTimeout(() => {
+                        document.getElementById('submit').innerText = 'Submit';
+                    }, 1000);
+                }
+            }
+        });
+    }
+    
+    if (category !== 'Contribute 50% to Studio') {
         usersRef.orderByChild('username').equalTo(username).once('value', (snapshot) => {
             const userData = snapshot.val();
             if (userData) {
@@ -104,16 +183,6 @@ tokenRequestForm.addEventListener('submit', (event) => {
         });
     }
 });
-
-function updateForm(element) {
-    const amountText = element.querySelector('span[data-amount]').textContent.trim();
-    const reason = element.querySelector('span[data-reason]').textContent.trim();
-    const amount = parseInt(amountText, 10);
-    const tokenRequestForm = document.getElementById('token_request');
-
-    tokenRequestForm.querySelector('input[name="amount"]').value = amount || '';
-    tokenRequestForm.querySelector('input[name="reason"]').value = reason;
-}
 
 $(document).ready(function () {
     $(".dashboard-nav-dropdown-toggle").click(function () {

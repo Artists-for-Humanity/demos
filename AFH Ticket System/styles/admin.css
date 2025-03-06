@@ -17,7 +17,7 @@
     font-size: 1rem;
 }
 
-.fas:hover {
+.fas:hover:not(.pool .fa-gear) {
     color: #f26532;
 }
 

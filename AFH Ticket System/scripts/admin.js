@@ -27,7 +27,7 @@ function updateLeaderboard() {
                     tokens: userData.tokens || 0,
                     password: userData.password || 'Undefined'
                 };
-                if (userObj.name === "STUDIO CONTRIBUTIONS") {
+                if (userObj.name === "CREATIVE TECHNOLOGY") {
                     studioContributions = userObj;
                 } else {
                     users.push(userObj);
@@ -44,7 +44,7 @@ function updateLeaderboard() {
             studioDiv.innerHTML = `
                 <div class='card-body'>
                     <span>
-                        <span class="fas fa-gear" onclick="logUserInfo('${studioContributions.name}', ${studioContributions.tokens}, '${studioContributions.password.replace(/'/g, "\\'")}')"></span>
+                        <span class="fas fa-gear" onclick="logUserInfo('${studioContributions.name}', ${studioContributions.tokens})"></span>
                         <span>${studioContributions.name}</span>
                     </span>
                     <span>${studioContributions.tokens} Tokens</span>
@@ -146,6 +146,23 @@ requestsRef.on('value', snapshot => {
 });
 
 function logUserInfo(name, tokens, password) {
+    let cardName = document.getElementById('card-name');
+    let cardPassword = document.getElementById('card-password');;
+    let ban = document.getElementsByClassName('fa-ban')[0];
+    let rotate = document.getElementsByClassName('fa-rotate-right')[0];
+
+    if(name === 'CREATIVE TECHNOLOGY'){
+        cardName.style.display = 'none';
+        cardPassword.style.display = 'none';
+        ban.style.display = 'none';
+        rotate.style.display = 'flex';
+    } else {
+        cardName.style.display = 'block';
+        cardPassword.style.display = 'block';
+        ban.style.display = 'block';
+        rotate.style.display = 'none';
+    }
+
     $('.dashboard-app').removeClass('current');
     $('.user-panel').addClass('current');
 
@@ -169,9 +186,18 @@ function logUserInfo(name, tokens, password) {
 }
 
 function adminActions(key) {
+    $('#reset').off('click');
     $('#kick').off('click');
     $('#cancel').off('click');
     $('#save').off('click');
+
+    $('#reset').on('click', () => {
+        resetTokens();
+        resetPool();
+        
+        $('.user-panel').removeClass('current');
+        $('.leaderboard-app').addClass('current');
+    });
 
     $('#kick').on('click', () => {
         deleteUser(key);
@@ -204,6 +230,40 @@ function adminActions(key) {
     });    
 }
 
+function resetTokens() {
+    fireBaseRef.child('users').once('value', snapshot => {
+        if (snapshot.exists()) {
+            snapshot.forEach(childSnapshot => {
+                const userData = childSnapshot.val();
+                const username = childSnapshot.key;
+
+                if (userData.hasOwnProperty('tokens')) {
+                    fireBaseRef.child('users').child(username).update({
+                        tokens: 0
+                    })
+                }
+            });
+        }
+    });
+}
+
+function resetPool() {
+    fireBaseRef.child('users').once('value', snapshot => {
+        if (snapshot.exists()) {
+            snapshot.forEach(childSnapshot => {
+                const userData = childSnapshot.val();
+                const username = childSnapshot.key;
+
+                if (userData.hasOwnProperty('isPooled')) {
+                    fireBaseRef.child('users').child(username).update({
+                        isPooled: false
+                    })
+                }
+            });
+        }
+    });
+}
+
 function deleteUser(userKey) {
     usersRef.child(userKey).remove()
         .then(() => {
@@ -217,16 +277,18 @@ function deleteUser(userKey) {
 }
 
 function updateUser(userKey, name, password, tokens) {
-    usersRef.child(userKey).update({
-        username: name,
-        password: password,
-        tokens: tokens
-    }).then(() => {
-        $('.user-panel').removeClass('current');
-        $('.leaderboard-app').addClass('current');
-    }).catch(error => {
-        console.error(error);
-    });
+    let updateData = { username: name, tokens: tokens };
+
+    if (password !== undefined && password !== 'undefined') {
+        updateData.password = password;
+    }
+
+    usersRef.child(userKey).update(updateData)
+        .then(() => {
+            $('.user-panel').removeClass('current');
+            $('.leaderboard-app').addClass('current');
+        })
+        .catch(console.error);
 }
 
 function changeActive(app) {

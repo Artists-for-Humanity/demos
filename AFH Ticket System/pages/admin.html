@@ -66,19 +66,19 @@
 				</header>
 				<div class='dashboard-content'>
 					<div class='container'>
-						<div class='card'>
+						<div class='card' id='card-name'>
 							<div class='card-body'>
 								<span>Name</span>
 								<input id="curr-name" type="text"></input>
 							</div>
 						</div>
-						<div class='card'>
+						<div class='card' id='card-password'>
 							<div class='card-body'>
 								<span>Password</span>
 								<input id="curr-password" type="text"></input>
 							</div>
 						</div>
-						<div class='card'>
+						<div class='card' id='card-tokens'>
 							<div class='card-body'>
 								<span>Tokens</span>
 								<input id="curr-tokens" type="number" min="0"></input>
@@ -86,7 +86,8 @@
 						</div>
 						<div class='card'>
 							<div class='card-body settings'>
-								<span class="fas fa-hammer" id="kick"></span>
+								<span class="fas fa-rotate-right" id="reset"></span>
+								<span class="fas fa-ban" id="kick"></span>
 								<span class="fas fa-x" id="cancel"></span>
 								<span class="fas fa-check" id="save"></span>
 							</div>

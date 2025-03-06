@@ -33,7 +33,8 @@ registerForm.addEventListener('submit', function(event) {
                 username: username,
                 password: password,
                 tokens: tokens,
-                isAdmin: false
+                isAdmin: false,
+                isPooled: false
             })            
             .then(() => {
                 sessionStorage.setItem('username', username);
