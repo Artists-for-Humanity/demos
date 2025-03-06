@@ -7,7 +7,10 @@
 *, *::before, *::after {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    scrollbar-width: 0px;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 html {
