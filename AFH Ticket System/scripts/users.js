@@ -1,3 +1,5 @@
+const mobileScreen = window.matchMedia("(max-width: 990px)");
+
 document.addEventListener("DOMContentLoaded", function() {
     const username = sessionStorage.getItem('username');
     if (!username) {
