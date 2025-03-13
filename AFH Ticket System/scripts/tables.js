@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
             { activity: "100% Attendance for the Week", reward: 3 }
         ],
         spend: [
-            { item: "Rasing Canes Party", price: 100 },
+            { item: "Raising Cane's Party", price: 100 },
             { item: "Pizza Party", price: 100 },
             { item: "Studio Movie Night", price: 50 },
             { item: "Studio Game Night", price: 50 },
