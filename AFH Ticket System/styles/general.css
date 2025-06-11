@@ -83,6 +83,10 @@ a:hover {
     justify-content: space-between;
 }
 
+#pending .card-body:first-child {
+    border-bottom: 1px dashed black;
+}
+
 .dashboard {
     display: -webkit-box;
     display: -webkit-flex;

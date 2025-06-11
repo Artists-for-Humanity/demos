@@ -60,7 +60,7 @@ function updateLeaderboard() {
             accountDiv.className = 'card';
             accountDiv.innerHTML = `
                 <div class='card-body'>
-                    <span>${user.name}</span>
+                    <span>${user.name.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase())}</span>
                     <span>${user.tokens} Tokens</span>
                 </div>
             `;

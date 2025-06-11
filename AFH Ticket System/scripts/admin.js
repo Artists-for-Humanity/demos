@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const requestsRef = firebase.database().ref('requests');
 const usersRef = firebase.database().ref('users');
+const archiveRef = firebase.database().ref('archive');
 const leaderboardDiv = document.querySelector('.container');
 
 const noTickets = document.getElementById('no-tickets')
@@ -45,7 +46,7 @@ function updateLeaderboard() {
                 <div class='card-body'>
                     <span>
                         <span class="fas fa-gear" onclick="logUserInfo('${studioContributions.name}', ${studioContributions.tokens})"></span>
-                        <span>${studioContributions.name}</span>
+                        <span>${studioContributions.name.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase())}</span>
                     </span>
                     <span>${studioContributions.tokens} Tokens</span>
                 </div>
@@ -60,7 +61,7 @@ function updateLeaderboard() {
                 <div class='card-body'>
                     <span>
                         <span class="fas fa-gear" onclick="logUserInfo('${user.name}', ${user.tokens}, '${user.password.replace(/'/g, "\\'")}')"></span>
-                        <span>${user.name}</span>
+                        <span>${user.name.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase())}</span>
                     </span>
                     <span>${user.tokens} Tokens</span>
                 </div>
@@ -88,20 +89,53 @@ function createRequestContainer(requestData, requestId) {
 
     newContainer.style.display = 'flex';
 
-    const requestDetails = `${requestData.username} is ${type} ${Math.abs(requestData.amount)} Tokens for "${requestData.reason}".`;
+    const requestDetails = `${requestData.username.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase())} is ${type} ${Math.abs(requestData.amount)} Tokens for "${requestData.reason}".`;
     newContainer.querySelector('.request-details').textContent = requestDetails;
 
     newContainer.querySelector('#deny').addEventListener('click', () => {
+        archiveRequest("denied", requestData); 
         deleteRequest(requestId);
-        checkEmpty()
+        checkEmpty();
     });
-
+    
     newContainer.querySelector('#approve').addEventListener('click', () => {
+        archiveRequest("approved", requestData);
         approveRequest(requestData.username, requestData.amount, requestId);
-        checkEmpty()
-    });
+        checkEmpty();
+    });    
 
     pendingDiv.appendChild(newContainer);
+}
+
+function createArchiveContainer(requestData, requestId) {
+    const auditContainer = document.getElementById('audit-container');
+    const template = auditContainer.querySelector('.archive-template');
+    if (!template) return;
+
+    const newContainer = template.cloneNode(true);
+    newContainer.id = requestId;
+    newContainer.classList.remove('archive-template');
+    newContainer.style.display = 'flex';
+
+    const requestDetails = `${requestData.username.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase())}'s ticket to ${requestData.type} ${Math.abs(requestData.amount)} Tokens for "${requestData.reason}" is ${requestData.action} on ${requestData.timestamp}.`;
+    newContainer.querySelector('.request-details').textContent = requestDetails;
+
+    auditContainer.appendChild(newContainer);
+}
+
+function archiveRequest(action, requestData) {
+    const date = new Date();
+    const type = requestData.amount > 0 ? 'request' : 'redeem';
+    const archivedDetails = {
+        username: requestData.username,
+        amount: requestData.amount,
+        reason: requestData.reason,
+        type: type,
+        action: action,
+        timestamp: date.toLocaleDateString()
+    };
+
+    archiveRef.push(archivedDetails);
 }
 
 function deleteRequest(requestId) {
@@ -115,9 +149,14 @@ function deleteRequest(requestId) {
 }
 
 function checkEmpty() {
-    const cardList = document.querySelectorAll('.request-details');
-    if (cardList.length === 2) {
-        noTickets.style.display = 'flex';
+    const requestDetails = document.querySelectorAll('#pending .request-details');
+    const actualRequests = Array.from(requestDetails).filter(el => 
+        el.closest('.card').style.display !== 'none' &&
+        el.closest('.card').id !== 'template-container'
+    );
+
+    if (actualRequests.length === 1) {
+        noTickets.style.display = "flex"
     }
 }
 
@@ -144,6 +183,26 @@ requestsRef.on('value', snapshot => {
         createRequestContainer(requestData, requestId);
     });
 });
+
+archiveRef.on('value', snapshot => {
+    const auditContainer = document.getElementById('audit-container');
+    
+    auditContainer.querySelectorAll('.card:not(.archive-template)').forEach(card => card.remove());
+
+    const entries = [];
+    snapshot.forEach(childSnapshot => {
+        entries.push({
+            id: childSnapshot.key,
+            data: childSnapshot.val()
+        });
+    });
+
+    for (let i = entries.length - 1; i >= 0; i--) {
+        const { id, data } = entries[i];
+        createArchiveContainer(data, id);
+    }
+});
+
 
 function logUserInfo(name, tokens, password) {
     let cardName = document.getElementById('card-name');

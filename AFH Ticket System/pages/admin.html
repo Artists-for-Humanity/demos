@@ -26,6 +26,7 @@
 				<nav class="dashboard-nav-list">
 					<a href="#" class="dashboard-nav-item active" onclick="changeActive('leaderboard-app')"><i class="fas fa-crown"></i>Leaderboard</a>
 					<a href="#" class="dashboard-nav-item" onclick="changeActive('tickets-app')"><i class="fas fa-ticket"></i>Tickets</a>
+					<a href="#" class="dashboard-nav-item" onclick="changeActive('audit-log')"><i class="fas fa-clock"></i>Audit Log</a>
 					<a href="#" class="dashboard-nav-item" onclick="changeActive('guidelines-app')"><i class="fas fa-handshake"></i>Guidelines</a>
 					<div class="nav-item-divider"></div>
 					<a href="https://afhtokens.netlify.app" class="dashboard-nav-item"><i class="fas fa-arrow-left"></i>Logout</a>
@@ -55,7 +56,7 @@
 								<div class='card-body'>
 									<span class="request-details"></span>
 								</div>
-								<div class='card-body' style="padding-top: 0;">
+								<div class='card-body'>
 									<span class="judge">
 										<div class="fas fa-x" id="deny"></div>
 										<div class="fas fa-check" id="approve"></div>
@@ -102,6 +103,21 @@
 					</div>
 				</div>
 			</div>
+			<div class='dashboard-app audit-log'>
+				<header class='dashboard-toolbar'>
+				<a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+				<span>AUDIT LOG</span>
+				</header>
+				<div class='dashboard-content'>
+				<div class='container' id="audit-container">
+					<div class='card archive-template' style="display: none;">
+					<div class='card-body'>
+						<span class="request-details"></span>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>			  
 			<div class='dashboard-app guidelines-app'>
 				<header class='dashboard-toolbar'>
 					<a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
