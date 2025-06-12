@@ -48,7 +48,7 @@ function updateLeaderboard() {
             studioDiv.className = 'card pool';
             studioDiv.innerHTML = `
                 <div class='card-body'>
-                    <span>${studioContributions.name}</span>
+                    <span>${studioContributions.name.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase())}</span>
                     <span>${studioContributions.tokens} Tokens</span>
                 </div>
             `;
